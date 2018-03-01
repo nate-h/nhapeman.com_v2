@@ -1,6 +1,6 @@
 <template>
   <div>
-    testing
+    testing123
     <a href="#/help">help</a>
 
   </div>
@@ -19,5 +19,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+    @import "../../static/main.scss";
 
+    $linkColor: red;
+    a {
+        color: $green;
+    }
 </style>
