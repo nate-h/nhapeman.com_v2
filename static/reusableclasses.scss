@@ -4,5 +4,7 @@
 // Purpose: Define reusable classes for project.
 ///////////////////////////////////////////////////////////////////////////////
 
-// This is breaking npm run dev.
-box-shadow: 0 4px 6px 0 #ccc; // hsla(0, 0, 0, .2)
+
+.box-shadow {
+    box-shadow: 0 4px 6px 0 hsla(0, 0, 0, .2);
+}
