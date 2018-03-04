@@ -23,6 +23,6 @@ export default {
 
     $linkColor: red;
     a {
-        color: $green;
+        color: $color1;
     }
 </style>

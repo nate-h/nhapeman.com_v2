@@ -1,0 +1,26 @@
+///////////////////////////////////////////////////////////////////////////////
+// Nathanial Hapeman's Resume Website v2.0
+// File: globals.scss
+// Purpose: Define reusable globals for project.
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////// Colors
+
+$text1: hsl(0, 0, 17%);  // For primary content (headlines, articles, etc.)
+$text2: hsl(0, 0, 40%);  // For secondary content (Dates)
+$text3: hsl(0, 0, 45%);  // Ancillary content (copyright notice in a footer)
+
+// Basic color theme.
+// https://coolors.co/b9d6f2-061a40-0353a4-006daa-003559
+$color1: rgba(185, 214, 242, 1);
+$color2: rgba(0, 109, 170, 1);
+$color3: rgba(3, 83, 164, 1);
+$color4: rgba(0, 53, 89, 1);
+$color5: rgba(6, 26, 64, 1);
+
+///////////////////////////////////////////////////////////////////////// Fonts
+
+$fwnormal: 450;
+$fwbold: 700;
