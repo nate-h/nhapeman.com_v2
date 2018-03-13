@@ -20,7 +20,45 @@ $color3: rgba(3, 83, 164, 1);
 $color4: rgba(0, 53, 89, 1);
 $color5: rgba(6, 26, 64, 1);
 
+$shadow: hsla(0, 0, 0, .2);
+
 ///////////////////////////////////////////////////////////////////////// Fonts
 
-$fwnormal: 450;
-$fwbold: 700;
+// Heading font size
+$h1: 2.25rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+
+// Headings
+$heading-font-color: #404040;
+$heading-font-weight: 600;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-line-height: 1.2;
+
+$fw-normal: 450;
+$fw-bold: 700;
+
+// Default font family
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+// Code (monospace) font family
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+///////////////////////////////////////////////////////////////////////// Fonts
+
+// Padding
+$padding: 1rem !default;
+$padding-small: .5rem;
+$padding-large: 1.5rem;
+
+// Margin
+$margin: 1rem !default;
+$margin-small: .5rem;
+$margin-large: 1.5rem;
+
+
+// Transitions
+$transition-time: .5s !default; //global transition time
+$transition-function: ease !default; //transition function for CSS3 transitions

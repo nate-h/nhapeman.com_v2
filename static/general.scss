@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////////////////////////
+// Nathanial Hapeman's Resume Website v2.0
+// File: general.scss
+// Purpose: Define reusable classes for project.
+///////////////////////////////////////////////////////////////////////////////
+
+html {
+    box-sizing: border-box;
+    font-family: $text-font-stack;
+    font-size: 62.5%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    color: #505050;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+// Basic styles for links
+a {
+    color: $color1;
+    text-decoration: none;
+
+    // &:hover,
+}
+
+// See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.box-shadow {
+    box-shadow: 0 4px 6px 0 $shadow;
+}
