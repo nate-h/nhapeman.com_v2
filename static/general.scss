@@ -13,9 +13,10 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     background-color: #fff;
-    color: #505050;
+    color: $text1;
     margin: 0;
     padding: 0;
+    text-align: center;
     text-rendering: optimizeLegibility;
 }
 

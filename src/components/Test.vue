@@ -21,8 +21,4 @@ export default {
 <style scoped lang="scss">
     @import "../../static/main.scss";
 
-    $linkColor: red;
-    a {
-        color: $color1;
-    }
 </style>
