@@ -4,20 +4,29 @@
 // Purpose: Define reusable classes for project.
 ///////////////////////////////////////////////////////////////////////////////
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     box-sizing: border-box;
     font-family: $text-font-stack;
     font-size: 62.5%;
+    height: 100%;
+    width: 100%;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     background-color: #fff;
     color: $text1;
+    height: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
     text-rendering: optimizeLegibility;
+    width: 100%;
 }
 
 img,
@@ -31,6 +40,13 @@ a {
     text-decoration: none;
 
     // &:hover,
+}
+
+p, ul, ol, span, a {
+    font-size: 1.6rem;
+    //line-height: 1.6rem;
+    //margin: 1.2rem 0 -1.2rem;
+    //padding-bottom: 1.2rem;
 }
 
 // See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/

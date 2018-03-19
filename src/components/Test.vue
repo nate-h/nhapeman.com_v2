@@ -1,8 +1,7 @@
 <template>
   <div>
-    testing123
+    <span>testing123</span>
     <a href="#/help">help</a>
-
   </div>
 </template>
 
