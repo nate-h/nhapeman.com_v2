@@ -2,11 +2,18 @@
   <div id="app">
 
       <header>
-          <a href="#">
-              <img src="./assets/logo.png">
-              <span>Nathanial Hapeman's Portfolio</span>
-          </a>
+          <div class="container">
+              <a href="#">
+                  <img src="./assets/logo.png">
+                  <span>Nathanial Hapeman's Portfolio</span>
+              </a>
 
+              <div class="link-holder">
+                  <a href="#" v-for="link in links" :key="link">
+                      <span>{{link.name}}</span>
+                  </a>
+              </div>
+          </div>
       </header>
 
     <img src="./assets/logo.png">
@@ -16,7 +23,18 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      links: [
+        {'name': 'Resume', 'link': '#'},
+        {'name': 'Projects', 'link': '#'},
+        {'name': 'Games', 'link': '#'},
+        {'name': 'Interest', 'link': '#'}
+      ]
+    }
+  }
+
 }
 </script>
 
@@ -37,9 +55,7 @@ export default {
         text-align: left;
 
         a {
-            align-items: center;
-            display: flex;
-            vertical-align: middle
+            @extend %v-center;
         }
 
         img {
@@ -57,6 +73,34 @@ export default {
             padding: 0;
         }
 
+        .link-holder {
+            @extend %v-center;
+
+            float: right;
+
+            a {
+                span {
+                    color: $color1;
+
+                    &:hover {
+                        color: $color2;
+                    }
+
+                    &:active {
+                        color: $color3;
+                    }
+                }
+            }
+
+            a:not(:last-child) {
+                margin-right: $margin;
+            }
+
+            a:first-child {
+                margin-left: auto;
+            }
+
+        }
     }
 
 </style>
