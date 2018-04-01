@@ -9,19 +9,23 @@
               </a>
 
               <div class="link-holder">
-                  <a href="#" v-for="link in links" :key="link">
+                  <a href="#" v-for="link in links" :key="link.name">
                       <span>{{link.name}}</span>
                   </a>
               </div>
           </div>
       </header>
 
-    <img src="./assets/logo.png">
-    <router-view/>
+    <!-- All routes get injected here. -->
+    <div class="container">
+        <router-view/>
+    </div>
+
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data () {
@@ -84,10 +88,18 @@ export default {
 
                     &:hover {
                         color: $color2;
+                        -webkit-transform: scale(1.05);
+                        -ms-transform: scale(1.05);
+                        transform: scale(1.05);
+                        transition: all .2s ease-in;
                     }
 
                     &:active {
                         color: $color3;
+                        -webkit-transform: scale(1.05);
+                        -ms-transform: scale(1.05);
+                        transform: scale(1.05);
+                        transition: all .2s ease-in;
                     }
                 }
             }

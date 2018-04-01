@@ -1,16 +1,15 @@
 <template>
-  <div class="container">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+  <div class="job-container">
+      <!-- Content inserted here! -->
+      <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Container',
+  name: 'JobContainer',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
@@ -18,7 +17,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    .container {
+
+    @import "../../static/main.scss";
+
+    .job-container {
         box-shadow: 0 4px 6px 0 $shadow;
     }
 </style>
