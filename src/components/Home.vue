@@ -2,13 +2,13 @@
   <div class="home">
     <h1>{{ msg }}</h1>
 
-    <job-container>
-        <img src="~img/ai.png">
-        Add image
-        Job name
-        years there
-        short description
-        Long description
+    <job-container company='Applied Invention'
+                   :img="require('@/assets/ai.png')"
+                   link='https://www.appliedinvention.com/'
+                   years='4'
+                   short-description='Software Developer'
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </job-container>
   </div>
 </template>
@@ -26,7 +26,11 @@ export default {
   },
   components: {
     'job-container': JobContainer
+  },
+  created: function () {
+
   }
+
 }
 </script>
 
@@ -36,6 +40,5 @@ export default {
     @import "../../static/main.scss";
 
     .home {
-        box-shadow: 0 4px 6px 0 $shadow;
     }
 </style>

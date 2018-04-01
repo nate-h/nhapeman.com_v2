@@ -1,6 +1,14 @@
 <template>
   <div class="job-container">
       <!-- Content inserted here! -->
+      <img :src="img">
+      <span>{{company}}</span>
+      <span>{{link}}</span>
+      <span>{{years}}</span>
+      <span>{{shortDescription}}</span>
+      <br>
+      LongDescription
+      <br>
       <slot></slot>
   </div>
 </template>
@@ -11,6 +19,14 @@ export default {
   data () {
     return {
     }
+  },
+  props: [
+    'company', 'img', 'link', 'years', 'short-description'
+  ],
+  methods: {
+  },
+  created: function () {
+    console.log('img', this.img)
   }
 }
 </script>
@@ -21,6 +37,8 @@ export default {
     @import "../../static/main.scss";
 
     .job-container {
+        background-color: $color1;
         box-shadow: 0 4px 6px 0 $shadow;
+        padding: $padding-large;
     }
 </style>
