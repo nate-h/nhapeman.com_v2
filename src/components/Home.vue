@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
 
     <job-container company='Applied Invention'
-                   :img="require('@/assets/ai.png')"
+                   :img="require('img/ai.png')"
                    link='https://www.appliedinvention.com/'
                    years='4'
                    short-description='Software Developer'
