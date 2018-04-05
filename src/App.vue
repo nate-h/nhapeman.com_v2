@@ -5,7 +5,7 @@
           <div class="container">
               <a href="#">
                   <img src="./assets/logo.png">
-                  <span>Nathanial Hapeman's Portfolio</span>
+                  <h1>Nathanial Hapeman's Portfolio</h1>
               </a>
 
               <div class="link-holder">
@@ -47,14 +47,13 @@ export default {
     @import "../static/main.scss";
 
     #app {
-        background-image: url('assets/bg.jpg');
-        background-repeat: repeat;
+        background: $color2;
         height: 100%;
         width: 100%;
     }
 
     header {
-        background-color: $color5;
+        background-color: white;
         padding: $padding-large;
         text-align: left;
 

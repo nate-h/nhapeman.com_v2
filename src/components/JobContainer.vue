@@ -5,10 +5,13 @@
         <img :src="img">
       </div>
       <div class="rightside">
-          <span>{{company}}</span>
-          <span>{{link}}</span>
-          <span>{{years}}</span>
-          <span>{{shortDescription}}</span>
+
+            <h2>
+                <b><a :href="link">{{company}}</a></b>
+                <small class="date">{{years}}</small>
+            </h2>
+
+          <p>{{shortDescription}}</p>
           <p>
             <slot></slot>
           </p>
@@ -42,18 +45,25 @@ export default {
     $img-side: 200px;
 
     .job-container {
-        background-color: $color1;
+        background-color: #fff;
         box-shadow: 0 4px 6px 0 $shadow;
+        display: flex;
+        margin: $margin-large;
         padding: $padding-large;
 
         .leftside {
-            display: inline-block;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-right: $padding-large;
             width: $img-side;
         }
 
         .rightside {
-            display: inline-block;
-            width: calc(100% - #{$img-side});
+            flex-grow: 1;
+
+            .date {
+                color: $text2;
+            }
         }
 
         img:first-of-type {
