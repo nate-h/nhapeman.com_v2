@@ -25,15 +25,12 @@
         </job-container>
     </div>
 
-    <!-- Inject Footer Component -->
-    <footer-container></footer-container>
   </div>
 </template>
 
 <script>
 
 import JobContainer from './JobContainer.vue'
-import FooterContainer from './FooterContainer.vue'
 import AboutMeContainer from './AboutMeContainer.vue'
 
 export default {
@@ -45,7 +42,6 @@ export default {
   },
   components: {
     'job-container': JobContainer,
-    'footer-container': FooterContainer,
     'about-me-container': AboutMeContainer
   },
   created: function () {
@@ -62,7 +58,7 @@ export default {
 
     .home {
         .jobs {
-            background-color: $color3;
+            // background-color: $color3;
             padding: $padding-large;
         }
     }

@@ -56,8 +56,7 @@ export default {
     $img-side: 200px;
 
     .about-me-container {
-        background-color: #fff;
-        box-shadow: 0 4px 6px 0 $shadow;
+        // box-shadow: 0 4px 6px 0 $shadow;
         display: flex;
         flex-direction: row;
         margin: $margin-large;

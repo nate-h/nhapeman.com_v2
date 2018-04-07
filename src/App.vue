@@ -21,10 +21,15 @@
         <router-view/>
     </div>
 
+    <!-- Inject Footer Component -->
+    <footer-container></footer-container>
+
   </div>
 </template>
 
 <script>
+
+import FooterContainer from './components/FooterContainer.vue'
 
 export default {
   name: 'App',
@@ -36,6 +41,9 @@ export default {
         {'name': 'Interactive', 'link': '#'}
       ]
     }
+  },
+  components: {
+    'footer-container': FooterContainer
   }
 
 }
@@ -46,7 +54,7 @@ export default {
     @import "../static/main.scss";
 
     #app {
-        background: $color2;
+        background: $color6;
         height: 100%;
         width: 100%;
     }
