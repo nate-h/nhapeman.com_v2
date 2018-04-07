@@ -32,7 +32,6 @@ export default {
   methods: {
   },
   created: function () {
-    console.log('img', this.img)
   }
 }
 </script>

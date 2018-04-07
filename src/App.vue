@@ -1,20 +1,8 @@
 <template>
   <div id="app">
 
-      <header>
-          <div class="container">
-              <a href="#">
-                  <img src="./assets/logo.png">
-                  <h1>Nathanial Hapeman's Portfolio</h1>
-              </a>
-
-              <div class="link-holder">
-                  <a href="#" v-for="link in links" :key="link.name">
-                      <span>{{link.name}}</span>
-                  </a>
-              </div>
-          </div>
-      </header>
+    <!-- Inject Header Component -->
+    <header-container :links='links'></header-container>
 
     <!-- All routes get injected here. -->
     <div class="container">
@@ -29,6 +17,7 @@
 
 <script>
 
+import HeaderContainer from './components/HeaderContainer.vue'
 import FooterContainer from './components/FooterContainer.vue'
 
 export default {
@@ -36,13 +25,14 @@ export default {
   data () {
     return {
       links: [
-        {'name': 'Home', 'link': '#'},
-        {'name': 'Resume', 'link': '#'},
+        {'name': 'Home', 'link': '#/'},
+        {'name': 'Resume', 'link': '#/resume'},
         {'name': 'Interactive', 'link': '#'}
       ]
     }
   },
   components: {
+    'header-container': HeaderContainer,
     'footer-container': FooterContainer
   }
 

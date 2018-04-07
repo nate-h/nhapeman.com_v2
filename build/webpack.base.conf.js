@@ -36,6 +36,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'root': resolve('.'),
       'img': resolve('src/assets'),
     }
   },
@@ -53,7 +54,7 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(pdf|png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,

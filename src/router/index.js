@@ -15,7 +15,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/Resume',
+      path: '/resume',
       name: 'Resume',
       component: Resume
     }

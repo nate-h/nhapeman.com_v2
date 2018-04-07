@@ -1,11 +1,16 @@
 <template>
   <div>
-    <span>testing123</span>
-    <a href="#/help">help</a>
+    <embed class="pdf"
+        :src="require('root/resume/Nathanial.Hapeman.Resume.pdf')"
+        type='application/pdf'
+    >
   </div>
 </template>
 
 <script>
+
+// import PDFResume from ''
+
 export default {
   name: 'Resume',
   data () {
@@ -20,4 +25,8 @@ export default {
 <style scoped lang="scss">
     @import "../../static/main.scss";
 
+    .pdf {
+        width: 100%;
+        hieght: 100%;
+    }
 </style>
