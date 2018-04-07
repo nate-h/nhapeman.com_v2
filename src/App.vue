@@ -31,10 +31,9 @@ export default {
   data () {
     return {
       links: [
+        {'name': 'Home', 'link': '#'},
         {'name': 'Resume', 'link': '#'},
-        {'name': 'Projects', 'link': '#'},
-        {'name': 'Games', 'link': '#'},
-        {'name': 'Interest', 'link': '#'}
+        {'name': 'Interactive', 'link': '#'}
       ]
     }
   }
