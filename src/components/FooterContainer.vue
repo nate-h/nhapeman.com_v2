@@ -1,17 +1,12 @@
 <template>
   <div class="footer-container">
-      <!-- Content inserted here! -->
-      <div class="leftside">
-          text
-      </div>
-      <div class="rightside">
 
-            <h2>
-                I'm the footer
-            </h2>
+      <h2>
+          I'm the footer
+      </h2>
 
-          <p>&copy; 2018 Nathanial Hapeman. All rights reserved.</p>
-      </div>
+    <p>&copy; 2018 Nathanial Hapeman. All rights reserved.</p>
+
   </div>
 </template>
 
@@ -44,7 +39,6 @@ export default {
         box-shadow: 0 4px 6px 0 $shadow;
         color: $color5;
         display: flex;
-        margin: $margin-large;
         padding: $padding-large;
 
         .leftside {
