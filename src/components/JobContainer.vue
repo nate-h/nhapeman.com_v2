@@ -1,5 +1,5 @@
 <template>
-  <div class="job-container">
+  <div class="job-container trace">
       <!-- Content inserted here! -->
       <div class="leftside">
         <img :src="img">

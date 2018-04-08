@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me-container">
+  <div class="about-me-container trace">
       <!-- Content inserted here! -->
       <div class="row">
           <h2> About Me </h2>
