@@ -13,23 +13,27 @@ html {
     box-sizing: border-box;
     font-family: $text-font-stack;
     font-size: 62.5%;
-    width: 100%;
-}
-
-.trace {
-    border: 1px dashed rgba(1, 1, 1, 0.1);
+    min-height: 100%;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     background-color: #fff;
     color: $text1;
-    height: 100%;
     margin: 0;
+    min-height: 100%;
     padding: 0;
-    //text-align: center;
     text-rendering: optimizeLegibility;
-    width: 100%;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body > * {
+    flex-shrink: 0;
 }
 
 img,
@@ -77,6 +81,10 @@ p, ul, ol, span, a {
         content: '';
         display: table;
     }
+}
+
+.trace {
+    border: 1px dashed rgba(1, 1, 1, 0.1);
 }
 
 .box-shadow {

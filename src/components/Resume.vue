@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="resume">
     <embed class="pdf"
         :src="require('root/resume/Nathanial.Hapeman.Resume.pdf')"
         type='application/pdf'
@@ -25,8 +25,15 @@ export default {
 <style scoped lang="scss">
     @import "../../static/main.scss";
 
-    .pdf {
+    .resume {
+
         width: 100%;
-        hieght: 100%;
+        height: 100%;
+
+        .pdf {
+            width: 100%;
+            height: 100%;
+        }
     }
+
 </style>

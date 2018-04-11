@@ -5,7 +5,7 @@
     <header-container :links='links'></header-container>
 
     <!-- All routes get injected here. -->
-    <div class="container">
+    <div class="router-view">
         <router-view/>
     </div>
 
@@ -45,8 +45,18 @@ export default {
 
     #app {
         background: white;
+        display: flex;
+        flex-direction: column;
         height: 100%;
         width: 100%;
+
+        & > * {
+          flex-shrink: 0;
+        }
+
+        .header-container {}
+        .router-view {flex: 1;}
+        .footer-container {}
     }
 
 </style>
