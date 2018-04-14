@@ -7,23 +7,25 @@
 
 //////////////////////////////////////////////////////////////////////// Colors
 
+// Dark colors.
 $dark1: rgba(0, 0, 0, .87);  // For primary content (headlines, articles, etc.)
 $dark2: rgba(0, 0, 0, .54);  // For secondary content (Dates)
 $dark3: rgba(0, 0, 0, .38);  // Ancillary content (copyright notice in a footer)
 
+// Light colors.
 $light1: rgba(255, 255, 255, 1);
 $light2: rgba(255, 255, 255, .7);
 $light3: rgba(255, 255, 255, .5);
 
-// Basic color theme.
+// Basic colors.
 $color1: #4db6ac;
 $color2: #00897b;
 $color3: #004d40;
 
+// etc.
 $shadow: hsla(0, 0, 0, .2);
 
 ///////////////////////////////////////////////////////////////////////// Fonts
-$white-text: hsla(0, 0, 100%, .9);
 
 // Heading font size
 $h1: 2.25rem;
@@ -33,7 +35,6 @@ $h4: 1.5rem;
 $h5: 1.25rem;
 
 // Headings
-$heading-font-color: #282c34;
 $heading-font-weight: 600;
 $heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 $heading-line-height: 1.2;

@@ -2,7 +2,7 @@
   <header class="header-container">
       <div>
           <a href="#">
-              <img src="~/img/logo.png">
+              <img src="~/img/logos/logo.png">
               <h1>Nathanial Hapeman's Portfolio</h1>
           </a>
 
@@ -40,24 +40,28 @@ export default {
     $img-side: 200px;
 
     header {
-        background-color: $color2;
+        background-color: $color3;
         padding: $padding-large;
         text-align: left;
+
+        h1 {
+            color: $light1;
+        }
 
         a {
             @extend %v-center;
         }
 
         img {
-            height: 2rem;
+            height: 6rem;
             margin: 0;
             padding: 0;
             margin-right: $margin;
-            width: 2rem;
+            width: 6rem;
         }
 
         span {
-            color: $white-text;
+            color: $light1;
             font-size: 2rem;
             margin: 0;
             padding: 0;
@@ -70,10 +74,10 @@ export default {
 
             a {
                 span {
-                    color: $color1;
+                    color: $light1;
 
                     &:hover {
-                        color: $color2;
+                        color: $color1;
                         -webkit-transform: scale(1.05);
                         -ms-transform: scale(1.05);
                         transform: scale(1.05);
@@ -81,7 +85,7 @@ export default {
                     }
 
                     &:active {
-                        color: $color3;
+                        color: $color1;
                         -webkit-transform: scale(1.05);
                         -ms-transform: scale(1.05);
                         transform: scale(1.05);
