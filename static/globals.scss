@@ -5,21 +5,20 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////////////////// Colors
 
-$text1: hsl(0, 0, 17%);  // For primary content (headlines, articles, etc.)
-$text2: hsl(0, 0, 40%);  // For secondary content (Dates)
-$text3: hsl(0, 0, 45%);  // Ancillary content (copyright notice in a footer)
+$dark1: rgba(0, 0, 0, .87);  // For primary content (headlines, articles, etc.)
+$dark2: rgba(0, 0, 0, .54);  // For secondary content (Dates)
+$dark3: rgba(0, 0, 0, .38);  // Ancillary content (copyright notice in a footer)
+
+$light1: rgba(255, 255, 255, 1);
+$light2: rgba(255, 255, 255, .7);
+$light3: rgba(255, 255, 255, .5);
 
 // Basic color theme.
-// https://coolors.co/b9d6f2-061a40-0353a4-006daa-003559
-$color1: #220C10;
-$color2: #506C64;
-$color3: #77CBB9;
-$color4: #75B8C8;
-$color5: #CDD3D5;
-$color6: #EEE;
+$color1: #4db6ac;
+$color2: #00897b;
+$color3: #004d40;
 
 $shadow: hsla(0, 0, 0, .2);
 

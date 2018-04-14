@@ -37,7 +37,7 @@ export default {
     .footer-container {
         background-color: $color1;
         box-shadow: 0 4px 6px 0 $shadow;
-        color: $color5;
+        color: $color3;
         display: flex;
         padding: $padding-large;
 
@@ -52,7 +52,7 @@ export default {
             flex-grow: 1;
 
             .date {
-                color: $text2;
+                color: $dark2;
             }
         }
     }

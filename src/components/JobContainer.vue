@@ -61,7 +61,7 @@ export default {
             flex-grow: 1;
 
             .date {
-                color: $text2;
+                color: $dark2;
             }
         }
 

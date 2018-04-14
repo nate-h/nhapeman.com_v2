@@ -73,12 +73,12 @@ export default {
 
                 li {
                     &.question {
-                        color: $text2;
+                        color: $dark2;
                         margin-top: $margin-small;
                     }
 
                     &.answer {
-                        color: $color4;
+                        color: $dark1;
                         font-weight: $fw-bold;
                     }
                 }
