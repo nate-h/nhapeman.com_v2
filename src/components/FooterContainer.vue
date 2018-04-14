@@ -35,11 +35,15 @@ export default {
     $img-side: 200px;
 
     .footer-container {
-        background-color: $color1;
-        box-shadow: 0 4px 6px 0 $shadow;
-        color: $color3;
+        background-color: $dark0;
+        color: $light1;
         display: flex;
         padding: $padding-large;
+
+        h2 {
+            color: $light1;
+        }
+
 
         .leftside {
             flex-grow: 0;

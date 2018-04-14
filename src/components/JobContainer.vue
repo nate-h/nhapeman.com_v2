@@ -44,8 +44,6 @@ export default {
     $img-side: 200px;
 
     .job-container {
-        // background-color: #fff;
-        // box-shadow: 0 4px 6px 0 $shadow;
         display: flex;
         margin: $margin-large;
         padding: $padding-large;

@@ -2,7 +2,7 @@
   <header class="header-container">
       <div>
           <a href="#">
-              <img src="~/img/logos/logo.png">
+              <!-- <img src="~/img/logos/logo.png"> -->
               <h1>Nathanial Hapeman's Portfolio</h1>
           </a>
 
