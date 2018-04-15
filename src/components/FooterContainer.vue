@@ -1,11 +1,15 @@
 <template>
   <div class="footer-container">
 
-      <h2>
-          I'm the footer
-      </h2>
-
-    <p>&copy; 2018 Nathanial Hapeman. All rights reserved.</p>
+      <div class="leftside">
+          <h2>Nathanial Hapeman</h2>
+          <p>Handmade by me &copy; 2018.</p>
+      </div>
+      <div class="rightside">
+          <p>LinkedIn</p>
+          <vector src="~img/github.svg"></vector>
+          <p>Github</p>
+      </div>
 
   </div>
 </template>
@@ -39,24 +43,18 @@ export default {
         color: $light1;
         display: flex;
         padding: $padding-large;
+        height: 10rem;
 
         h2 {
             color: $light1;
         }
 
         .leftside {
-            flex-grow: 0;
-            flex-shrink: 0;
-            margin-right: $padding-large;
-            width: $img-side;
+            width: 50%;
         }
 
         .rightside {
-            flex-grow: 1;
-
-            .date {
-                color: $dark2;
-            }
+            text-align: right;
         }
     }
 </style>
