@@ -37,8 +37,6 @@ export default {
 
     @import "../../static/main.scss";
 
-    $img-side: 200px;
-
     header {
         background-color: $color3;
         padding: $padding-large;

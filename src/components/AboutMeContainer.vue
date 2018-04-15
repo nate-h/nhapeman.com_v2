@@ -53,8 +53,6 @@ export default {
 
     @import "../../static/main.scss";
 
-    $img-side: 200px;
-
     .about-me-container {
         display: flex;
         flex-direction: row;

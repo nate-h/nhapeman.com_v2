@@ -44,7 +44,6 @@ export default {
             color: $light1;
         }
 
-
         .leftside {
             flex-grow: 0;
             flex-shrink: 0;

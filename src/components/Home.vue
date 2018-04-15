@@ -15,7 +15,7 @@
     </job-container>
 
     <job-container
-      company='FrackOptima trace'
+      company='FrackOptima'
       :img="require('img/frackoptima.png')"
       link='http://frackoptima.com/'
       years='May 2016-Present'

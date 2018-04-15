@@ -7,11 +7,11 @@
       <div class="rightside">
 
             <h2>
-                <b><a :href="link">{{company}}</a></b>
-                <small class="date">{{years}}</small>
+                <a :href="link">{{company}}</a>
+                <small class="date right">{{years}}</small>
             </h2>
 
-          <p>{{shortDescription}}</p>
+          <h3>{{shortDescription}}</h3>
           <p>
             <slot></slot>
           </p>
@@ -59,7 +59,8 @@ export default {
             flex-grow: 1;
 
             .date {
-                color: $dark2;
+                margin-left: $margin-large;
+                color: $dark3;
             }
         }
 
