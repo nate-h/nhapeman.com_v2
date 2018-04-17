@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import Vector from './components/vector.vue'
-Vue.component('vector', Vector)
+import SVGLink from './components/SVGLink.vue'
+Vue.component('svg-link', SVGLink)
 
 Vue.config.productionTip = false
 

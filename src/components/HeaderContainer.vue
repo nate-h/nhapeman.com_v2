@@ -79,7 +79,7 @@ export default {
                         -webkit-transform: scale(1.05);
                         -ms-transform: scale(1.05);
                         transform: scale(1.05);
-                        transition: all .2s ease-in;
+                        transition: all $transition-time $transition-function;
                     }
 
                     &:active {
@@ -87,7 +87,7 @@ export default {
                         -webkit-transform: scale(1.05);
                         -ms-transform: scale(1.05);
                         transform: scale(1.05);
-                        transition: all .2s ease-in;
+                        transition: all $transition-time $transition-function;
                     }
                 }
             }

@@ -14,10 +14,10 @@ module.exports = {
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
   transformToRequire: {
-    video: ['src', 'poster'],
-    vector: 'src',
-    source: 'src',
-    img: 'src',
-    image: 'xlink:href'
+    "video": ['src', 'poster'],
+    "svg-link": 'src',
+    "source": 'src',
+    "img": 'src',
+    "image": 'xlink:href'
   }
 }

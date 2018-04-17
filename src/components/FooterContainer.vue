@@ -7,7 +7,9 @@
       </div>
       <div class="rightside">
           <p>LinkedIn</p>
-          <vector src="~img/github.svg">Some texty</vector>
+          <svg-link src="~img/github.svg" link="https://github.com/nate-h">
+              Github
+          </svg-link>
       </div>
 
   </div>
@@ -38,7 +40,7 @@ export default {
     $img-side: 200px;
 
     .footer-container {
-        //background-color: $dark0;
+        background-color: $dark0;
         background-color: #666;
         color: $light1;
         display: flex;
@@ -55,6 +57,18 @@ export default {
 
         .rightside {
             text-align: right;
+        }
+
+        .svg-link {
+            fill: white;
+
+            &:hover {
+                fill: grey;
+            }
+
+            &:active {
+                fill: red;
+            }
         }
     }
 </style>
