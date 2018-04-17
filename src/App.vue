@@ -44,7 +44,6 @@ export default {
     @import "../static/main.scss";
 
     #app {
-        background-image: url('assets/bg.png');
         display: flex;
         flex-direction: column;
         height: 100%;
