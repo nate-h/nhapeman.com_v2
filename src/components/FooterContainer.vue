@@ -7,8 +7,7 @@
       </div>
       <div class="rightside">
           <p>LinkedIn</p>
-          <vector src="~img/github.svg"></vector>
-          <p>Github</p>
+          <vector src="~img/github.svg">Some texty</vector>
       </div>
 
   </div>
@@ -39,7 +38,8 @@ export default {
     $img-side: 200px;
 
     .footer-container {
-        background-color: $dark0;
+        //background-color: $dark0;
+        background-color: #666;
         color: $light1;
         display: flex;
         padding: $padding-large;

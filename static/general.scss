@@ -101,6 +101,10 @@ p, ul, ol, li, td, input, button, label {
     max-width: map-get($breakpoints, large);
 }
 
+%container {
+    background-color: white;
+}
+
 %v-center {
     align-items: center;
     display: inline-flex;

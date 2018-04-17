@@ -1,5 +1,5 @@
 <template>
-  <div class="job-container trace">
+  <div class="job-container">
       <!-- Content inserted here! -->
       <div class="leftside">
         <img :src="img">
@@ -44,6 +44,9 @@ export default {
     $img-side: 200px;
 
     .job-container {
+
+        @extend %container;
+
         display: flex;
         margin: $margin-large;
         padding: $padding-large;

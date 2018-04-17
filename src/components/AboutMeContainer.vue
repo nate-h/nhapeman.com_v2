@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me-container trace">
+  <div class="about-me-container">
       <!-- Content inserted here! -->
       <div class="row">
           <h2> About Me </h2>
@@ -54,6 +54,9 @@ export default {
     @import "../../static/main.scss";
 
     .about-me-container {
+
+        @extend %container;
+
         display: flex;
         flex-direction: row;
         margin: $margin-large;
