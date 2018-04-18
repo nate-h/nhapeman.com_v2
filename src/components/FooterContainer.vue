@@ -6,7 +6,9 @@
           <p>Handmade by me &copy; 2018.</p>
       </div>
       <div class="rightside">
-          <p>LinkedIn</p>
+          <svg-link src="~img/linkedin.svg" link="https://www.linkedin.com/in/nhapeman/">
+              LinkedIn
+          </svg-link>
           <svg-link src="~img/github.svg" link="https://github.com/nate-h">
               Github
           </svg-link>
@@ -41,7 +43,6 @@ export default {
 
     .footer-container {
         background-color: $dark0;
-        background-color: #666;
         color: $light1;
         display: flex;
         padding: $padding-large;
@@ -56,18 +57,23 @@ export default {
         }
 
         .rightside {
+            display: flex;
+            flex-direction: row;
             text-align: right;
         }
 
         .svg-link {
-            fill: white;
+            fill: $light1;
+            color: $light1;
 
             &:hover {
-                fill: grey;
+                fill: $color1;
+                color: $color1;
             }
 
             &:active {
-                fill: red;
+                fill: $color2;
+                color: $color2;
             }
         }
     }

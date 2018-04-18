@@ -83,7 +83,7 @@ export default {
                     }
 
                     &:active {
-                        color: $color1;
+                        color: $color2;
                         -webkit-transform: scale(1.05);
                         -ms-transform: scale(1.05);
                         transform: scale(1.05);

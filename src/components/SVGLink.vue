@@ -1,8 +1,7 @@
 <template>
     <a :href="link" class="svg-link">
-        <div v-once v-html="src" class="imdiv">
-        <span><slot></slot></span>
-        </div>
+        <div v-once v-html="src" class="svg-injector"></div>
+        <p class="svg-label"><slot></slot></p>
     </a>
 
 </template>
@@ -17,14 +16,20 @@ export default {
 <style scoped lang="scss">
     @import "../../static/main.scss";
 
+    $logo-size: 25px;
+
     .svg-link {
         @extend %v-center;
 
         transition: all $transition-time $transition-function;
 
-        .imdiv {
-            height: 30px;
-            width: 30px;
+        .svg-injector {
+            height: $logo-size;
+            width: $logo-size;
+        }
+
+        .svg-label {
+            margin-left: $margin
         }
     }
 </style>
