@@ -45,6 +45,7 @@ export default {
         background-color: $dark0;
         color: $light1;
         display: flex;
+        flex-direction: row;
         padding: $padding-large;
         height: 10rem;
 
@@ -52,19 +53,21 @@ export default {
             color: $light1;
         }
 
-        .leftside {
-            width: 50%;
-        }
-
-        .rightside {
+        .leftside, .rightside {
             display: flex;
-            flex-direction: row;
-            text-align: right;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+
+            & > * {
+                margin: 4px;
+            }
         }
 
         .svg-link {
             fill: $light1;
             color: $light1;
+            margin-left: auto;
 
             &:hover {
                 fill: $color1;
