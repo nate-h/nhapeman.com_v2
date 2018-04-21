@@ -23,11 +23,21 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </job-container>
 
+    <project-container
+      company='Future project name'
+      :img="require('img/frackoptima.png')"
+      link='http://frackoptima.com/'
+      years='May 2016-Present'
+      short-description='Software Developer'>
+        Shorter description
+    </project-container>
+
   </div>
 </template>
 
 <script>
 
+import ProjectContainer from './ProjectContainer.vue'
 import JobContainer from './JobContainer.vue'
 import AboutMeContainer from './AboutMeContainer.vue'
 
@@ -39,6 +49,7 @@ export default {
     }
   },
   components: {
+    'project-container': ProjectContainer,
     'job-container': JobContainer,
     'about-me-container': AboutMeContainer
   },

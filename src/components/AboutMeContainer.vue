@@ -10,7 +10,8 @@
 
       </div>
       <div class="row">
-          <img src="~img/stitchedme.jpg" alt="">
+          <!-- <img src="~img/stitchedme.jpg" alt=""> -->
+          <img src="~img/blankperson.jpg" alt="">
       </div>
       <div class="row">
 
