@@ -34,6 +34,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
+      'scss-loader': 'sass-loader',
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'root': resolve('.'),
@@ -43,6 +44,16 @@ module.exports = {
   module: {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
+      {
+            test: /\.scss$/,
+            use: [{
+                loader: "style-loader" // creates style nodes from JS strings
+            }, {
+                loader: "css-loader" // translates CSS into CommonJS
+            }, {
+                loader: "sass-loader" // compiles Sass to CSS
+            }]
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
