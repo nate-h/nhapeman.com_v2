@@ -1,16 +1,18 @@
 <template>
   <header class="header-container">
-      <div>
+
+      <div class="vertical-rows">
           <a href="#">
               <!-- <img src="~/img/logos/logo.png"> -->
-              <h1>Nathanial Hapeman's Portfolio</h1>
+              <h1>Nathanial Hapeman</h1>
           </a>
+          <h2>Software Engineer</h2>
+      </div>
 
-          <div class="link-holder">
-              <a :href="link.link" v-for="link in links" :key="link.name">
-                  <span>{{link.name}}</span>
-              </a>
-          </div>
+      <div class="link-holder">
+          <a :href="link.link" v-for="link in links" :key="link.name">
+              <span>{{link.name}}</span>
+          </a>
       </div>
   </header>
 </template>
@@ -38,7 +40,11 @@ export default {
     @import "~scss/main.scss";
 
     header {
-        background-color: $color3;
+
+        @extend %v-center;
+
+        background-color: $dark0;
+        // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: $padding-large;
         text-align: left;
 
@@ -68,7 +74,7 @@ export default {
         .link-holder {
             @extend %v-center;
 
-            float: right;
+            margin-left: auto;
 
             a {
                 span {
@@ -97,7 +103,7 @@ export default {
             }
 
             a:first-child {
-                margin-left: auto;
+
             }
 
         }

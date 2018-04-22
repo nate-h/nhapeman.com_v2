@@ -27,8 +27,9 @@ export default {
 
     .resume {
 
-        width: 100%;
+        background-color: #525659;
         height: 100%;
+        width: 100%;
 
         .pdf {
             width: 100%;

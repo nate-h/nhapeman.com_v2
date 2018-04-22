@@ -60,7 +60,7 @@ export default {
         }
 
         &:not(.big-project) {
-            margin: 0;
+
         }
 
         .leftside {
@@ -72,6 +72,7 @@ export default {
 
         .rightside {
             flex-grow: 1;
+            padding: $padding-small;
 
             .date {
                 margin-left: $margin-large;

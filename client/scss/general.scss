@@ -87,6 +87,11 @@ p, ul, ol, li, td, input, button, label {
     float: left;
 }
 
+.vertical-rows {
+    display: inline-flex;
+    flex-direction: column;
+}
+
 .trace {
     border: 1px dashed rgba(1, 1, 1, 0.1);
 }
@@ -108,7 +113,7 @@ p, ul, ol, li, td, input, button, label {
 %container {
     background-color: white;
     box-shadow: 0 4px 6px 0 hsla(0, 0, 50, 0.3);
-    margin: $margin-large 0;
+    margin: $margin-small 0;
     padding: $padding-large;
 }
 

@@ -1,8 +1,11 @@
 <template>
   <div class="home container">
-      <br>
 
     <about-me-container></about-me-container>
+
+    <!-- <div class="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d37858.78538155945!2d-118.26050664216869!3d34.1259456992745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1524381406579" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div> -->
 
     <!-- Inject Job Components -->
     <job-container
@@ -98,14 +101,14 @@ export default {
     @import "~scss/main.scss";
 
     .home {
-
+        padding: $padding-small 0;
     }
 
     .horizontal {
 
         display: inline-flex;
         flex-direction: row;
-        margin: $margin-large 0;
+        margin: 0;
 
         div:not(:first-child) {
             margin-left: $margin-small;

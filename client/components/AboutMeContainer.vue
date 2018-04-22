@@ -7,6 +7,9 @@
           <p>
               Hi! I'm Nathanial Hapeman and I am a professional software engineer.
               I haven't quite narrowed down what I parti
+
+              I have done work in software development, front-end/back-end web, video game development.
+
           </p>
 
       </div>
