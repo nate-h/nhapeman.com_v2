@@ -10,8 +10,8 @@
 
       </div>
       <div class="row">
-          <!-- <img src="~img/stitchedme.jpg" alt=""> -->
-          <img src="~img/blankperson.jpg" alt="">
+          <img src="~img/stitchedme.jpg" alt="">
+          <!-- <img src="~img/blankperson.jpg" alt=""> -->
       </div>
       <div class="row">
 
@@ -60,8 +60,6 @@ export default {
 
         display: flex;
         flex-direction: row;
-        margin: $margin-large;
-        padding: $padding-large;
 
         .row {
             flex-basis: 0;

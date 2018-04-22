@@ -103,6 +103,8 @@ p, ul, ol, li, td, input, button, label {
 
 %container {
     background-color: white;
+    margin: $margin-large 0;
+    padding: $padding-large;
 }
 
 %v-center {

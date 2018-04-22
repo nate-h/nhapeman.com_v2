@@ -27,7 +27,7 @@ export default {
     }
   },
   props: [
-    'company', 'img', 'link', 'years', 'short-description'
+    'company', 'img', 'link', 'years', 'short-description', 'big-project'
   ],
   methods: {
   },
@@ -49,9 +49,12 @@ export default {
 
         display: flex;
         flex-direction: column;
-        margin: $margin-large;
-        padding: $padding-large;
-        width: 50%;
+        //width: 50%;
+
+        // If big project, make container full width.
+        &.big-project {
+            //width: 100%;
+        }
 
         .topside {
             flex-grow: 0;

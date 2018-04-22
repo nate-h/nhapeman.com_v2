@@ -48,8 +48,6 @@ export default {
         @extend %container;
 
         display: flex;
-        margin: $margin-large;
-        padding: $padding-large;
 
         .leftside {
             flex-grow: 0;
