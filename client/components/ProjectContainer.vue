@@ -50,7 +50,7 @@ export default {
 
         @extend %container;
 
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         //width: 50%;
 

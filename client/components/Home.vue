@@ -102,8 +102,10 @@ export default {
     }
 
     .horizontal {
-        display: flex;
+
+        display: inline-flex;
         flex-direction: row;
+        margin: $margin-large 0;
 
         div:not(:first-child) {
             margin-left: $margin-small;

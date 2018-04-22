@@ -47,7 +47,7 @@ export default {
 
         @extend %container;
 
-        display: flex;
+        display: inline-flex;
 
         .leftside {
             flex-grow: 0;
