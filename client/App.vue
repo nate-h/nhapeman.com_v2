@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss">
 
-    @import "../static/main.scss";
+    @import "~scss/main.scss";
 
     #app {
         display: flex;

@@ -12,7 +12,7 @@ const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
+  include: [resolve('client'), resolve('test')],
   options: {
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
@@ -22,7 +22,7 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './client/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -36,9 +36,10 @@ module.exports = {
     alias: {
       'scss-loader': 'sass-loader',
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      '@': resolve('client'),
       'root': resolve('.'),
-      'img': resolve('src/assets'),
+      'img': resolve('client/assets/images'),
+      'scss': resolve('client/scss'),
     }
   },
   module: {
@@ -62,7 +63,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        include: [resolve('client'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
         test: /\.(pdf|png|jpe?g|gif)(\?.*)?$/,

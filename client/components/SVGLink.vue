@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import "../../static/main.scss";
+    @import "~scss/main.scss";
 
     $logo-size: 25px;
 

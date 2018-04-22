@@ -1,10 +1,10 @@
 <template>
   <div class="project-container">
       <!-- Content inserted here! -->
-      <div class="leftside">
+      <div class="topside">
         <img :src="img">
       </div>
-      <div class="rightside">
+      <div class="bottomside">
 
             <h2>
                 <a :href="link">{{company}}</a>
@@ -39,7 +39,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-    @import "../../static/main.scss";
+    @import "~scss/main.scss";
 
     $img-side: 200px;
 
@@ -48,17 +48,19 @@ export default {
         @extend %container;
 
         display: flex;
+        flex-direction: column;
         margin: $margin-large;
         padding: $padding-large;
+        width: 50%;
 
-        .leftside {
+        .topside {
             flex-grow: 0;
             flex-shrink: 0;
             margin-right: $padding-large;
             width: $img-side;
         }
 
-        .rightside {
+        .bottomside {
             flex-grow: 1;
 
             .date {
