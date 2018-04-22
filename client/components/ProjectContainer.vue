@@ -11,10 +11,8 @@
 
             <h2>
                 <a :href="link">{{name}}</a>
-                <small class="date right">{{years}}</small>
             </h2>
 
-          <h3>{{shortDescription}}</h3>
           <p>
             <slot></slot>
           </p>
@@ -30,7 +28,7 @@ export default {
     }
   },
   props: [
-    'name', 'img', 'link', 'years', 'short-description', 'big-project', 'video'
+    'name', 'img', 'link', 'big-project', 'video'
   ],
   methods: {
   },
@@ -52,7 +50,6 @@ export default {
 
         display: inline-flex;
         flex-direction: row;
-        //width: 50%;
 
         // If big project, make container full width.
         &.big-project {
@@ -67,7 +64,6 @@ export default {
             flex-grow: 0;
             flex-shrink: 0;
             margin-right: $padding-large;
-            //width: $img-side;
         }
 
         .rightside {
