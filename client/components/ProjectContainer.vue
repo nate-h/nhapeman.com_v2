@@ -1,13 +1,16 @@
 <template>
   <div class="project-container">
       <!-- Content inserted here! -->
-      <div class="topside">
-        <img :src="img">
+      <div class="leftside">
+        <img :src="img" v-if="img">
+        <div class="" v-html="video" v-if="video">
+        </div>
+
       </div>
-      <div class="bottomside">
+      <div class="rightside">
 
             <h2>
-                <a :href="link">{{company}}</a>
+                <a :href="link">{{name}}</a>
                 <small class="date right">{{years}}</small>
             </h2>
 
@@ -27,7 +30,7 @@ export default {
     }
   },
   props: [
-    'company', 'img', 'link', 'years', 'short-description', 'big-project'
+    'name', 'img', 'link', 'years', 'short-description', 'big-project', 'video'
   ],
   methods: {
   },
@@ -48,22 +51,26 @@ export default {
         @extend %container;
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         //width: 50%;
 
         // If big project, make container full width.
         &.big-project {
-            //width: 100%;
+
         }
 
-        .topside {
+        &:not(.big-project) {
+            margin: 0;
+        }
+
+        .leftside {
             flex-grow: 0;
             flex-shrink: 0;
             margin-right: $padding-large;
-            width: $img-side;
+            //width: $img-side;
         }
 
-        .bottomside {
+        .rightside {
             flex-grow: 1;
 
             .date {
