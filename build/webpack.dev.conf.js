@@ -61,8 +61,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../client/assets/icons'),
-        to: config.dev.assetsSubDirectory,
-        ignore: ['.*']
+        to: 'client/assets/icons',
+        //ignore: ['.*']
       }
     ])
   ]
