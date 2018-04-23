@@ -3,12 +3,12 @@
       <!-- Content inserted here! -->
       <div class="row">
           <h2> About Me </h2>
-
           <p>
               Hi! I'm Nathanial Hapeman and I am a professional software engineer.
-              I haven't quite narrowed down what I parti
-
-              I have done work in software development, front-end/back-end web, video game development.
+              I enjoy writing software for many different fields. I have worked most
+              of my professional career as a simulation developer but have been doing
+              front-end development for the past year. When I'm not watching Netflix
+              or hanging out with friends, I'm probably coding.
 
           </p>
 

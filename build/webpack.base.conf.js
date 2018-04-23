@@ -32,13 +32,14 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.html'],
     alias: {
       'scss-loader': 'sass-loader',
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('client'),
       'root': resolve('.'),
       'img': resolve('client/assets/images'),
+      'icons': resolve('client/assets/icons'),
       'scss': resolve('client/scss'),
     }
   },

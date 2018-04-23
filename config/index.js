@@ -8,7 +8,7 @@ module.exports = {
   dev: {
 
     // Paths
-    assetsSubDirectory: 'clients/assets',
+    assetsSubDirectory: 'client/assets',
     assetsPublicPath: '/',
     proxyTable: {},
 
@@ -49,7 +49,7 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'clients/assets',
+    assetsSubDirectory: 'client/assets',
     assetsPublicPath: '/',
 
     /**
