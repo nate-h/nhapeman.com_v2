@@ -1,7 +1,7 @@
 <template>
   <header class="header-container">
 
-      <img src="~img/logo.png">
+      <img src="~img/logo.png" class="headerlogo">
       <div class="vertical-rows">
           <a href="#">
               <!-- <img src="~/img/logos/logo.png"> -->
@@ -42,6 +42,14 @@ export default {
 
     header {
 
+        &:hover {
+
+            .headerlogo {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
         @extend %v-center;
 
         background-color: $dark0;
@@ -63,6 +71,9 @@ export default {
             padding: 0;
             margin-right: $margin;
             width: 6rem;
+
+            -webkit-transition: -webkit-transform .8s ease-in-out;
+            transition: transform .8s ease-in-out;
         }
 
         span {
