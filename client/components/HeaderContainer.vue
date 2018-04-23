@@ -1,6 +1,7 @@
 <template>
   <header class="header-container">
 
+      <img src="~img/logo.png">
       <div class="vertical-rows">
           <a href="#">
               <!-- <img src="~/img/logos/logo.png"> -->
