@@ -1,11 +1,23 @@
-Include spotify play list
+# Elements to add:
 
-Include auto drawer
+  * Include spotify play list
+  * Include auto drawer
+  * Include pacman
+  * Include minesweeper
+  * Add interesting stuff I came across
 
-Include pacman
+# What to improve
+  * Figure out how to section everything
+  * About me
+    - Needs more content
+    - Needs back story
+    - Needs map of the city where I live
 
-include minesweeper
 
-map of the city where I live
 
-animate gear on startup and on header hover
+
+
+
+
+
+create skill component
