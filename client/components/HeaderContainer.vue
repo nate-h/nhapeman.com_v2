@@ -20,18 +20,18 @@
 
 <script>
 export default {
-  name: 'HeaderContainer',
-  data () {
-    return {
+    name: 'HeaderContainer',
+    data () {
+        return {
+        }
+    },
+    props: [
+        'links'
+    ],
+    methods: {
+    },
+    created: function () {
     }
-  },
-  props: [
-    'links'
-  ],
-  methods: {
-  },
-  created: function () {
-  }
 }
 </script>
 

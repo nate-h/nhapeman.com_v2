@@ -8,16 +8,16 @@ import Resume from '@/components/Resume'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Main',
-      component: Home
-    },
-    {
-      path: '/resume',
-      name: 'Resume',
-      component: Resume
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'Main',
+            component: Home
+        },
+        {
+            path: '/resume',
+            name: 'Resume',
+            component: Resume
+        }
+    ]
 })

@@ -68,7 +68,7 @@ rules:
   hex-length: 1
   hex-notation: 1
   indentation:
-    - 2
+    - 4
     -
       size: 4
   leading-zero: 1

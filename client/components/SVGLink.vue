@@ -9,7 +9,7 @@
 <script>
 // see vue-loader.conf
 export default {
-  props: ['src', 'link', 'color-off', 'color-hover', 'color-down']
+    props: ['src', 'link', 'color-off', 'color-hover', 'color-down']
 }
 </script>
 

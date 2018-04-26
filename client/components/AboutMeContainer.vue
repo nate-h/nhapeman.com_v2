@@ -38,18 +38,18 @@
 
 <script>
 export default {
-  name: 'AboutMeContainer',
-  data () {
-    return {
-    }
-  },
-  props: [
+    name: 'AboutMeContainer',
+    data () {
+        return {
+        }
+    },
+    props: [
 
-  ],
-  methods: {
-  },
-  created: function () {
-  }
+    ],
+    methods: {
+    },
+    created: function () {
+    }
 }
 </script>
 

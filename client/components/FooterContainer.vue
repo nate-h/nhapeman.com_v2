@@ -19,18 +19,18 @@
 
 <script>
 export default {
-  name: 'FooterContainer',
-  data () {
-    return {
-    }
-  },
-  props: [
+    name: 'FooterContainer',
+    data () {
+        return {
+        }
+    },
+    props: [
 
-  ],
-  methods: {
-  },
-  created: function () {
-  }
+    ],
+    methods: {
+    },
+    created: function () {
+    }
 }
 </script>
 

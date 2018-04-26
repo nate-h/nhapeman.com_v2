@@ -22,18 +22,18 @@
 
 <script>
 export default {
-  name: 'ProjectContainer',
-  data () {
-    return {
+    name: 'ProjectContainer',
+    data () {
+        return {
+        }
+    },
+    props: [
+        'name', 'img', 'link', 'big-project', 'video'
+    ],
+    methods: {
+    },
+    created: function () {
     }
-  },
-  props: [
-    'name', 'img', 'link', 'big-project', 'video'
-  ],
-  methods: {
-  },
-  created: function () {
-  }
 }
 </script>
 

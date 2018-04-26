@@ -12,12 +12,12 @@
 // import PDFResume from ''
 
 export default {
-  name: 'Resume',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: 'Resume',
+    data () {
+        return {
+            msg: 'Welcome to Your Vue.js App'
+        }
     }
-  }
 }
 </script>
 

@@ -21,18 +21,18 @@
 
 <script>
 export default {
-  name: 'JobContainer',
-  data () {
-    return {
+    name: 'JobContainer',
+    data () {
+        return {
+        }
+    },
+    props: [
+        'company', 'img', 'link', 'years', 'short-description'
+    ],
+    methods: {
+    },
+    created: function () {
     }
-  },
-  props: [
-    'company', 'img', 'link', 'years', 'short-description'
-  ],
-  methods: {
-  },
-  created: function () {
-  }
 }
 </script>
 

@@ -68,21 +68,21 @@ import JobContainer from './JobContainer.vue'
 import AboutMeContainer from './AboutMeContainer.vue'
 
 export default {
-  name: 'Home',
-  data () {
-    return {
-      mariovideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/EMslyjWIPGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
-      mytunesvideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-    }
-  },
-  components: {
-    'project-container': ProjectContainer,
-    'job-container': JobContainer,
-    'about-me-container': AboutMeContainer
-  },
-  created: function () {
+    name: 'Home',
+    data () {
+        return {
+            mariovideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/EMslyjWIPGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+            mytunesvideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        }
+    },
+    components: {
+        'project-container': ProjectContainer,
+        'job-container': JobContainer,
+        'about-me-container': AboutMeContainer
+    },
+    created: function () {
 
-  }
+    }
 
 }
 </script>
