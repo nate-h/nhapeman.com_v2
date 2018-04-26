@@ -1,6 +1,13 @@
 <template>
   <div id="app">
 
+    <div class="sample-header">
+      <div class="sample-header-section">
+        <h1>Scroll down to see the parallax effect</h1>
+        <h2>Background landcape scrolls with its own depth </h2>
+      </div>
+    </div>
+
     <!-- Inject Header Component -->
     <header-container :links='links'></header-container>
 
@@ -34,6 +41,28 @@ export default {
   components: {
     'header-container': HeaderContainer,
     'footer-container': FooterContainer
+  },
+  created: function () {
+
+    /*
+      var parallaxHeight = function parallaxHeightFull() {
+        var scrollTop = $(this).scrollTop();
+        var sampleSectionTop = $('.sample-section').offset().top;
+        var headerHeight = $('.sample-header-section').outerHeight();
+        $('.sample-section').css({'margin-top': headerHeight})
+        $('.sample-header').css({height: headerHeight - scrollTop})
+      }
+
+      parallaxHeight();
+
+      $(window).scroll(function() {
+        parallaxHeight();
+      })
+
+      $(window).resize(function() {
+        parallaxHeight();
+      })
+    */
   }
 
 }
@@ -56,6 +85,37 @@ export default {
         .header-container {}
         .router-view {flex: 1;}
         .footer-container {}
+
+        .sample-header {
+              position: fixed;
+              left: 0;
+              top: 0;
+              width: 100%;
+              background-image: url('~img/forest.jpg');
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            .sample-header::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background-color: MidnightBlue;
+              opacity: 0.3;
+            }
+            .sample-header-section {
+              position: relative;
+              padding: 15% 0 10%;
+              max-width: 640px;
+              margin-left: auto;
+              margin-right: auto;
+              color: white;
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+              font-family: "Montserrat", sans-serif;
+            }
     }
 
 </style>
