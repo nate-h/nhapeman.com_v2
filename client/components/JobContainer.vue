@@ -46,7 +46,6 @@ export default {
     .job-container {
 
         @extend %container;
-
         display: inline-flex;
 
         .leftside {

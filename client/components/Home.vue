@@ -8,6 +8,7 @@
     </div> -->
 
     <!-- Inject Job Components -->
+    <h1 class="centered">Job History</h1>
     <job-container
       company='Applied Invention'
       :img="require('img/ai.png')"
@@ -17,7 +18,6 @@
 
         This is my current full time job and an amazing company! At Applied Invention, we work on creating innovative solutions for leading companies and entrepreneurs. All of the projects I've worked on have been extremely interesting and exciting to work on. The longest project I worked on was our in-house geo-spacial game engine that was built for simulations. The engine was written in c++ and used panda3d, an open source 3D game engine. Currently, I am working as a front-end engineer on an in-house website used to collect training data for machine learning algorithms.
     </job-container>
-
     <job-container
       company='FrackOptima'
       :img="require('img/frackoptima.png')"
@@ -27,6 +27,7 @@
         I worked part-time at FrackOptima as a software engineer while working full-time for Applied Invention. FrackOptima is a hydraulic fracturing company that specializes in software and services for optimal hydraulic fracturing treatments. There's several systems which make this all possible. Most of my work has been on the company website and the fracking simulator.
     </job-container>
 
+    <h1 class="centered">Projects</h1>
     <project-container :class="{'big-project': true}"
       name='SDL Super Mario Bros Clone'
       :video="mariovideo"
