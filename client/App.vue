@@ -4,15 +4,16 @@
         <!-- Inject Header Component -->
         <header-container :links='links'></header-container>
 
-        <!-- <div class="sample-header">
-            <div class="sample-header-text">
-                <h1>Scroll down to see the parallax effect</h1>
-                <h2>Background landcape scrolls with its own depth </h2>
-            </div>
-        </div> -->
-
         <!-- All routes get injected here. -->
-        <div class="router-view">
+        <div class="main-container">
+
+            <div class="parallax-hero">
+                <div class="parallax-hero-text">
+                    <h1>Hello, my name is Nathanial Hapeman.</h1>
+                    <h2>And I love to code!</h2>
+                </div>
+            </div>
+
             <router-view/>
         </div>
 
@@ -84,41 +85,32 @@ export default {
     }
 
     .header-container {}
-    .router-view {
+    .main-container {
         flex: 1;
         overflow: auto;
     }
     .footer-container {}
 
-    .sample-header {
-        position: fixed;
-        left: 0;
-        top: 0;
+    .parallax-hero {
+
+        @extend %v-center;
+
         width: 100%;
+        height: 250px;
         background-image: url('~img/forest.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .sample-header::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: MidnightBlue;
-        opacity: 0.3;
-    }
-    .sample-header-text {
-        position: relative;
-        padding: 15% 0 10%;
-        max-width: 640px;
+
+    .parallax-hero-text {
         margin-left: auto;
         margin-right: auto;
         color: white;
+        text-align: center;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
         font-family: "Montserrat", sans-serif;
+        background-color: $bg-shadow;
     }
 }
 
