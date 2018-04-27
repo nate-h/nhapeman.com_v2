@@ -1,6 +1,9 @@
 <template>
     <div id="app">
 
+        <!-- Inject Header Component -->
+        <header-container :links='links'></header-container>
+
         <!-- <div class="sample-header">
             <div class="sample-header-text">
                 <h1>Scroll down to see the parallax effect</h1>
@@ -8,16 +11,13 @@
             </div>
         </div> -->
 
-        <!-- Inject Header Component -->
-        <header-container :links='links'></header-container>
-
         <!-- All routes get injected here. -->
         <div class="router-view">
             <router-view/>
         </div>
 
         <!-- Inject Footer Component -->
-        <footer-container></footer-container>
+        <!-- <footer-container></footer-container> -->
 
     </div>
 </template>
@@ -74,8 +74,9 @@ export default {
 
 #app {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
+    overflow: hidden;
     width: 100%;
 
     & > * {
@@ -83,7 +84,10 @@ export default {
     }
 
     .header-container {}
-    .router-view {flex: 1;}
+    .router-view {
+        flex: 1;
+        overflow: auto;
+    }
     .footer-container {}
 
     .sample-header {

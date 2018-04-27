@@ -42,20 +42,18 @@ export default {
 
     header {
 
-        &:hover {
-
-            .headerlogo {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        @extend %v-center;
+        @extend %h-center;
 
         background-color: $dark0;
         // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: $padding-large;
         text-align: left;
+        width: 250px;
+
+        .headerlogo:hover {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
 
         h1 {
             color: $light1;
@@ -84,9 +82,7 @@ export default {
         }
 
         .link-holder {
-            @extend %v-center;
-
-            margin-left: auto;
+            @extend %h-center;
 
             a {
                 span {

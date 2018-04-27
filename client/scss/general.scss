@@ -125,6 +125,13 @@ p, ul, ol, li, td, input, button, label {
     vertical-align: middle;
 }
 
+%h-center {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
 /////////////////////////////////////////////////////////////////////
 // Text
 /////////////////////////////////////////////////////////////////////
