@@ -49,10 +49,6 @@ export default {
         padding: $padding-large;
         height: 10rem;
 
-        h2 {
-            color: $light1;
-        }
-
         .leftside, .rightside {
             display: flex;
             flex-direction: column;

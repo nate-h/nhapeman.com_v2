@@ -4,7 +4,6 @@
       <img src="~img/logo.png" class="headerlogo">
       <div class="vertical-rows">
           <a href="#">
-              <!-- <img src="~/img/logos/logo.png"> -->
               <h1>Nathanial Hapeman</h1>
           </a>
           <h2>Software Engineer</h2>
@@ -45,18 +44,13 @@ export default {
         @extend %h-center;
 
         background-color: $dark0;
-        // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: $padding-large;
         text-align: left;
-        width: 250px;
+        width: 220px;
 
         .headerlogo:hover {
             -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-        }
-
-        h1 {
-            color: $light1;
         }
 
         a {

@@ -9,6 +9,12 @@
     padding: 0;
 }
 
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 html {
     box-sizing: border-box;
     font-family: $text-font-stack;
@@ -27,12 +33,6 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-html, body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
 body > * {
     flex-shrink: 0;
 }
@@ -46,15 +46,17 @@ svg {
 a {
     color: $color1;
     text-decoration: none;
-
-    // &:hover,
 }
 
-h1 {font-size: $h1;}
-h2 {font-size: $h2; color: $color2;}
-h3 {font-size: $h3;}
-h4 {font-size: $h4;}
-h5 {font-size: $h5;}
+@for $i from 1 through length($heading-sizes) {
+    h#{$i} {
+        font-size: $heading-sizes($i);
+    }
+}
+
+h1 {color: $color1;}
+h2 {color: $color2;}
+h3 {color: $color3;}
 
 h1, h2, h3, h4, h5 {
     font-family: $heading-font-family;
@@ -64,6 +66,11 @@ h1, h2, h3, h4, h5 {
 p, ul, ol, li, td, input, button, label {
     font-size: 1.6rem;
 }
+
+/////////////////////////////////////////////////////////////////////
+// General Resuable Rules.
+/////////////////////////////////////////////////////////////////////
+
 
 // See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *,
@@ -91,6 +98,7 @@ p, ul, ol, li, td, input, button, label {
 .vertical-rows {
     display: inline-flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .trace {
