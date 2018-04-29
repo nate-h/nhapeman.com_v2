@@ -24,7 +24,8 @@ export default {
     data () {
         return {
             links: [
-                {'name': 'Home', 'link': '#/'},
+                {'name': 'About Me', 'link': '#/'},
+                {'name': 'Job History', 'link': '#'},
                 {'name': 'Projects', 'link': '#'},
                 {'name': 'Contact', 'link': '#'},
                 {'name': 'Resume', 'link': '#/resume'}

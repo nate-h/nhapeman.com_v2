@@ -102,7 +102,19 @@ export default {
     @import "~scss/main.scss";
 
     .main-container {
-        //padding: $padding-small 0;
+
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        vertical-align: middle;
+
+        & > * {
+            flex: 1 0 auto;
+
+            &:not(.parallax-hero) {
+                max-width: map-get($breakpoints, large);
+            }
+        }
     }
 
     .horizontal {

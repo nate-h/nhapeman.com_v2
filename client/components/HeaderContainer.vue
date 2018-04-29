@@ -14,6 +14,15 @@
               <span>{{link.name}}</span>
           </a>
       </div>
+
+      <div class="social-links">
+          <svg-link src="~img/linkedin.svg" link="https://www.linkedin.com/in/nhapeman/">
+              LinkedIn
+          </svg-link>
+          <svg-link src="~img/github.svg" link="https://github.com/nate-h">
+              Github
+          </svg-link>
+      </div>
   </header>
 </template>
 
@@ -103,5 +112,32 @@ export default {
                 }
             }
         }
+
+        .social-links {
+
+            @extend %h-center;
+
+            margin-top: auto;
+
+            & > * {
+                margin: 4px;
+            }
+
+            .svg-link {
+                fill: $light1;
+                color: $light1;
+
+                &:hover {
+                    fill: $color1;
+                    color: $color1;
+                }
+
+                &:active {
+                    fill: $color2;
+                    color: $color2;
+                }
+            }
+        }
+
     }
 </style>
