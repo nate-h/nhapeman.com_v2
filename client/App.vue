@@ -4,20 +4,10 @@
         <!-- Inject Header Component -->
         <header-container :links='links'></header-container>
 
-        <!-- All routes get injected here. -->
-        <div class="main-container">
-
-            <div class="parallax-hero">
-                <div class="parallax-hero-text">
-                    <h1>Hello, my name is Nathanial Hapeman.</h1>
-                    <h2>And I love to code!</h2>
-                </div>
-            </div>
-
-            <router-view/>
-        </div>
+        <main-container></main-container>
 
         <!-- Inject Footer Component -->
+        <!-- <router-view/> -->
         <!-- <footer-container></footer-container> -->
 
     </div>
@@ -26,6 +16,7 @@
 <script>
 
 import HeaderContainer from './components/HeaderContainer.vue'
+import MainContainer from './components/MainContainer.vue'
 import FooterContainer from './components/FooterContainer.vue'
 
 export default {
@@ -34,13 +25,15 @@ export default {
         return {
             links: [
                 {'name': 'Home', 'link': '#/'},
-                {'name': 'Resume', 'link': '#/resume'},
-                {'name': 'Interactive', 'link': '#'}
+                {'name': 'Projects', 'link': '#'},
+                {'name': 'Contact', 'link': '#'},
+                {'name': 'Resume', 'link': '#/resume'}
             ]
         }
     },
     components: {
         'header-container': HeaderContainer,
+        'main-container': MainContainer,
         'footer-container': FooterContainer
     },
     created: function () {
