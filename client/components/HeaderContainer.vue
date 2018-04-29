@@ -82,7 +82,10 @@ export default {
         }
 
         .link-holder {
+
             @extend %h-center;
+
+            margin-top: $margin-large;
 
             a {
                 span {
@@ -105,15 +108,6 @@ export default {
                     }
                 }
             }
-
-            a:not(:last-child) {
-                margin-right: $margin;
-            }
-
-            a:first-child {
-
-            }
-
         }
     }
 </style>

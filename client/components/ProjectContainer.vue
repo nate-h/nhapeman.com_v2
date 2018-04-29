@@ -69,11 +69,6 @@ export default {
         .rightside {
             flex-grow: 1;
             padding: $padding-small;
-
-            .date {
-                margin-left: $margin-large;
-                color: $dark3;
-            }
         }
 
         img:first-of-type {
