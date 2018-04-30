@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container">
+    <div class="main-container" v-on:scroll="handleScroll">
 
         <div class="parallax-hero">
             <div class="parallax-hero-text">
@@ -93,19 +93,37 @@ export default {
     },
     methods: {
         handleScroll () {
-            console.log('test333')
             this.scrolled = window.scrollY > 0
+            let mainHeadings = this.$el.querySelectorAll('.main-section')
+            let topPos = this.$el.scrollTop
+            let mainHeight = this.$el.getBoundingClientRect().height
+            let goalHeight = topPos + 1 / 4 * mainHeight
+            let closestElement = null
+            let closestDistance = Number.MAX_SAFE_INTEGER
+
+            for (let element of mainHeadings) {
+                let headingTop = element.offsetTop
+                let distanceToHeading = goalHeight - headingTop
+                element.classList.remove('active')
+
+                if (distanceToHeading >= 0 && closestDistance > distanceToHeading) {
+                    closestDistance = distanceToHeading
+                    closestElement = element
+                }
+            }
+
+            if (closestElement) {
+                closestElement.classList.add('active')
+            }
+
+            console.log('closestElement', closestElement)
         }
     },
     created: function () {
-        console.log('test')
-        document.body.addEventListener('scroll', this.handleScroll)
     },
     destroyed: function () {
-        console.log('test111')
-        document.body.removeEventListener('scroll', this.handleScroll)
-    }
 
+    }
 }
 </script>
 
@@ -133,6 +151,8 @@ export default {
             background-color: $light1;
             padding: $padding-large;
             z-index: 999;
+
+            &.active {background: red;}
         }
     }
 

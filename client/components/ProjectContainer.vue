@@ -3,8 +3,7 @@
       <!-- Content inserted here! -->
       <div class="leftside">
         <img :src="img" v-if="img">
-        <div class="" v-html="video" v-if="video">
-        </div>
+        <div class="" v-html="video" v-if="video"></div>
 
       </div>
       <div class="rightside">

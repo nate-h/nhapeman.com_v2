@@ -37,8 +37,10 @@ export default {
         'main-container': MainContainer,
         'footer-container': FooterContainer
     },
-    created: function () {
+    methods: {
 
+    },
+    created: function () {
         /*
         var parallaxHeight = function parallaxHeightFull() {
             var scrollTop = $(this).scrollTop();
@@ -58,6 +60,9 @@ export default {
             parallaxHeight();
         })
         */
+    },
+    destroyed: function () {
+
     }
 
 }
