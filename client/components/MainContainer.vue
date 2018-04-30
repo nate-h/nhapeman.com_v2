@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <h1 class="centered">About Me</h1>
+        <h1 class="main-section">About Me</h1>
         <about-me-container></about-me-container>
 
         <!-- <div class="">
@@ -16,7 +16,8 @@
         </div> -->
 
         <!-- Inject Job Components -->
-        <h1 class="centered">Job History</h1>
+        <h1 class="main-section">Job History</h1>
+
         <job-container
           company='Applied Invention'
           :img="require('img/ai.png')"
@@ -35,7 +36,7 @@
             I worked part-time at FrackOptima as a software engineer while working full-time for Applied Invention. FrackOptima is a hydraulic fracturing company that specializes in software and services for optimal hydraulic fracturing treatments. There's several systems which make this all possible. Most of my work has been on the company website and the fracking simulator.
         </job-container>
 
-        <h1 class="centered">Projects</h1>
+        <h1 class="main-section">Projects</h1>
         <project-container :class="{'big-project': true}"
           name='SDL Super Mario Bros Clone'
           :video="mariovideo"
@@ -81,7 +82,8 @@ export default {
     data () {
         return {
             mariovideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/EMslyjWIPGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
-            mytunesvideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+            mytunesvideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+            scrolled: false
         }
     },
     components: {
@@ -89,8 +91,19 @@ export default {
         'job-container': JobContainer,
         'about-me-container': AboutMeContainer
     },
+    methods: {
+        handleScroll () {
+            console.log('test333')
+            this.scrolled = window.scrollY > 0
+        }
+    },
     created: function () {
-
+        console.log('test')
+        document.body.addEventListener('scroll', this.handleScroll)
+    },
+    destroyed: function () {
+        console.log('test111')
+        document.body.removeEventListener('scroll', this.handleScroll)
     }
 
 }
@@ -115,6 +128,18 @@ export default {
                 max-width: map-get($breakpoints, large);
             }
         }
+
+        & > h1 {
+            background-color: $light1;
+            padding: $padding-large;
+            z-index: 999;
+        }
+    }
+
+    h1 + div {
+        border-top: solid 1px #e4e6e8;
+        padding-top: 30px !important;
+        margin-top: -30px !important;
     }
 
     .horizontal {
