@@ -24,11 +24,11 @@ export default {
     data () {
         return {
             links: [
-                {'name': 'About Me', 'link': '#/'},
-                {'name': 'Job History', 'link': '#'},
-                {'name': 'Projects', 'link': '#'},
-                {'name': 'Contact', 'link': '#'},
-                {'name': 'Resume', 'link': '#/resume'}
+                {'name': 'About Me', 'link': 'aboutme'},
+                {'name': 'Job History', 'link': 'jobhistory'},
+                {'name': 'Projects', 'link': 'projects'},
+
+                {'name': 'Resume', 'link': '/resume'}
             ]
         }
     },

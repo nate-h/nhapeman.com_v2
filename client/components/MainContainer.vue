@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <h1 class="main-section">About Me</h1>
+        <h1 id="aboutme" class="main-section">About Me</h1>
         <about-me-container></about-me-container>
 
         <!-- <div class="">
@@ -16,7 +16,7 @@
         </div> -->
 
         <!-- Inject Job Components -->
-        <h1 class="main-section">Job History</h1>
+        <h1 id="jobhistory" class="main-section">Job History</h1>
 
         <job-container
           company='Applied Invention'
@@ -36,7 +36,7 @@
             I worked part-time at FrackOptima as a software engineer while working full-time for Applied Invention. FrackOptima is a hydraulic fracturing company that specializes in software and services for optimal hydraulic fracturing treatments. There's several systems which make this all possible. Most of my work has been on the company website and the fracking simulator.
         </job-container>
 
-        <h1 class="main-section">Projects</h1>
+        <h1 id="projects" class="main-section">Projects</h1>
         <project-container :class="{'big-project': true}"
           name='SDL Super Mario Bros Clone'
           :video="mariovideo"
@@ -95,6 +95,7 @@ export default {
         handleScroll () {
             this.scrolled = window.scrollY > 0
             let mainHeadings = this.$el.querySelectorAll('.main-section')
+            let sideBarButtons = document.querySelectorAll('.link-buttons')
             let topPos = this.$el.scrollTop
             let mainHeight = this.$el.getBoundingClientRect().height
             let goalHeight = topPos + 1 / 4 * mainHeight
@@ -112,11 +113,16 @@ export default {
                 }
             }
 
-            if (closestElement) {
-                closestElement.classList.add('active')
+            // Make sure none of the buttons are active before we mark the new active button.
+            for (let element of sideBarButtons) {
+                element.classList.remove('active')
             }
 
-            console.log('closestElement', closestElement)
+            if (closestElement) {
+                let id = 'link_' + closestElement.id
+                let element = document.getElementById(id)
+                element.classList.add('active')
+            }
         }
     },
     created: function () {

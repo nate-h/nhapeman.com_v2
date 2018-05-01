@@ -10,9 +10,11 @@
       </div>
 
       <div class="link-holder">
-          <a :href="link.link" v-for="link in links" :key="link.name">
+          <button :id="'link_' + link.link"  v-for="link in links" :key="link.name"
+            class="link-buttons"
+            v-on:click="linkClick(link.link)">
               <span>{{link.name}}</span>
-          </a>
+          </button>
       </div>
 
       <div class="social-links">
@@ -37,6 +39,17 @@ export default {
         'links'
     ],
     methods: {
+        linkClick (link) {
+            let element = document.getElementById(link)
+            console.log('element', element)
+
+            let scrollOptions = {
+                'behavior': 'smooth',
+                'block': 'start',
+                'inline': 'nearest'
+            }
+            element.scrollIntoView(scrollOptions)
+        }
     },
     created: function () {
     }
@@ -90,7 +103,21 @@ export default {
 
             margin-top: $margin-large;
 
-            a {
+            .link-buttons {
+
+                @extend %button;
+
+                background-color: transparent;
+                margin: 0;
+
+                &.active span {
+                    color: $color2;
+                    -webkit-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    transform: scale(1.05);
+                    transition: all $transition-time $transition-function;
+                }
+
                 span {
                     color: $light1;
 
