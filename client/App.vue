@@ -89,28 +89,6 @@ export default {
         overflow: auto;
     }
     .footer-container {}
-
-    .parallax-hero {
-
-        @extend %v-center;
-
-        width: 100%;
-        height: 250px;
-        background-image: url('~img/forest.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .parallax-hero-text {
-        margin-left: auto;
-        margin-right: auto;
-        color: white;
-        text-align: center;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        font-family: "Montserrat", sans-serif;
-        background-color: $bg-shadow;
-    }
 }
 
 </style>
