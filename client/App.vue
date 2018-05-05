@@ -4,10 +4,8 @@
         <!-- Inject Header Component -->
         <header-container :links='links'></header-container>
 
-        <main-container></main-container>
-
         <!-- Inject Footer Component -->
-        <!-- <router-view/> -->
+        <router-view/>
         <!-- <footer-container></footer-container> -->
 
     </div>
@@ -16,7 +14,6 @@
 <script>
 
 import HeaderContainer from './components/HeaderContainer.vue'
-import MainContainer from './components/MainContainer.vue'
 import FooterContainer from './components/FooterContainer.vue'
 
 export default {
@@ -34,7 +31,6 @@ export default {
     },
     components: {
         'header-container': HeaderContainer,
-        'main-container': MainContainer,
         'footer-container': FooterContainer
     },
     methods: {
@@ -84,7 +80,7 @@ export default {
     }
 
     .header-container {}
-    .main-container {
+    .home-container {
         flex: 1;
         overflow: auto;
     }

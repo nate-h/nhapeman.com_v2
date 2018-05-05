@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container" v-on:scroll="handleScroll">
+    <div class="home-container" v-on:scroll="handleScroll">
 
         <div class="parallax-hero">
             <div class="parallax-hero-text">
@@ -8,11 +8,7 @@
             </div>
         </div>
 
-        <div class="trick">
-
-        </div>
-
-        <div class="main-container-body">
+        <div class="home-container-body">
             <h1 id="aboutme" class="main-section">About Me</h1>
             <about-me-container></about-me-container>
 
@@ -83,7 +79,7 @@ import JobContainer from './JobContainer.vue'
 import AboutMeContainer from './AboutMeContainer.vue'
 
 export default {
-    name: 'MainContainer',
+    name: 'HomeContainer',
     data () {
         return {
             mariovideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/EMslyjWIPGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
@@ -143,7 +139,7 @@ export default {
 
     @import "~scss/main.scss";
 
-    .main-container {
+    .home-container {
 
         align-items: center;
         display: flex;
@@ -154,7 +150,7 @@ export default {
             flex: 1 0 auto;
         }
 
-        .main-container-body {
+        .home-container-body {
 
             align-items: center;
             background-color: white;
@@ -195,6 +191,7 @@ export default {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        -webkit-transform: translateZ(0);
     }
 
     .parallax-hero-text {
