@@ -2,19 +2,17 @@
     <div id="app">
 
         <!-- Inject Header Component -->
-        <header-container :links='links'></header-container>
+        <sidebar-container :links='links'></sidebar-container>
 
         <!-- Inject Footer Component -->
         <router-view/>
-        <!-- <footer-container></footer-container> -->
 
     </div>
 </template>
 
 <script>
 
-import HeaderContainer from './components/HeaderContainer.vue'
-import FooterContainer from './components/FooterContainer.vue'
+import SidebarContainer from './components/SidebarContainer.vue'
 
 export default {
     name: 'App',
@@ -23,15 +21,12 @@ export default {
             links: [
                 {'name': 'About Me', 'link': 'aboutme'},
                 {'name': 'Job History', 'link': 'jobhistory'},
-                {'name': 'Projects', 'link': 'projects'},
-
-                {'name': 'Resume', 'link': '/resume'}
+                {'name': 'Projects', 'link': 'projects'}
             ]
         }
     },
     components: {
-        'header-container': HeaderContainer,
-        'footer-container': FooterContainer
+        'sidebar-container': SidebarContainer
     },
     methods: {
 
@@ -79,7 +74,7 @@ export default {
         flex-shrink: 0;
     }
 
-    .header-container {}
+    .sidebar-container {}
     .home-container {
         flex: 1;
         overflow: auto;

@@ -1,5 +1,5 @@
 <template>
-  <header class="header-container">
+  <header class="sidebar-container">
 
       <img src="~img/logo.png" class="headerlogo">
       <div class="vertical-rows">
@@ -18,6 +18,9 @@
       </div>
 
       <div class="social-links">
+          <svg-link src="~img/resume.svg" link="#/resume">
+              Resume
+          </svg-link>
           <svg-link src="~img/linkedin.svg" link="https://www.linkedin.com/in/nhapeman/">
               LinkedIn
           </svg-link>
@@ -30,7 +33,7 @@
 
 <script>
 export default {
-    name: 'HeaderContainer',
+    name: 'SidebarContainer',
     data () {
         return {
         }

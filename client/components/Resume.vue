@@ -9,8 +9,6 @@
 
 <script>
 
-// import PDFResume from ''
-
 export default {
     name: 'Resume',
     data () {
