@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
 // Components
-import Home from '@/components/HomeContainer'
-import Resume from '@/components/Resume'
+import Home from '@/components/HomeContainer';
+import Resume from '@/components/Resume';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
     routes: [
@@ -20,4 +20,4 @@ export default new Router({
             component: Home
         }
     ]
-})
+});

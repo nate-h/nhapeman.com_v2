@@ -1,29 +1,23 @@
 <template>
     <div id="app">
 
-        <!-- Inject Header Component -->
-        <sidebar-container :links='links'></sidebar-container>
+        <!-- Inject sidebar -->
+        <sidebar-container></sidebar-container>
 
-        <!-- Inject Footer Component -->
+        <!-- Inject routes -->
         <router-view/>
-
     </div>
 </template>
 
 <script>
 
-import SidebarContainer from './components/SidebarContainer.vue'
+import SidebarContainer from './components/SidebarContainer.vue';
 
 export default {
     name: 'App',
     data () {
         return {
-            links: [
-                {'name': 'About Me', 'link': 'aboutme'},
-                {'name': 'Job History', 'link': 'jobhistory'},
-                {'name': 'Projects', 'link': 'projects'}
-            ]
-        }
+        };
     },
     components: {
         'sidebar-container': SidebarContainer
@@ -56,7 +50,7 @@ export default {
 
     }
 
-}
+};
 </script>
 
 <style lang="scss">

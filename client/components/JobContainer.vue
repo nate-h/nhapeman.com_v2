@@ -24,16 +24,12 @@ export default {
     name: 'JobContainer',
     data () {
         return {
-        }
+        };
     },
     props: [
         'company', 'img', 'link', 'years', 'short-description'
-    ],
-    methods: {
-    },
-    created: function () {
-    }
-}
+    ]
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

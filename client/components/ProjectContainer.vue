@@ -24,16 +24,12 @@ export default {
     name: 'ProjectContainer',
     data () {
         return {
-        }
+        };
     },
     props: [
         'name', 'img', 'link', 'big-project', 'video'
-    ],
-    methods: {
-    },
-    created: function () {
-    }
-}
+    ]
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

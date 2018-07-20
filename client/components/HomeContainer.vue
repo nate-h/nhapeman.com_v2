@@ -74,9 +74,9 @@
 
 <script>
 
-import ProjectContainer from './ProjectContainer.vue'
-import JobContainer from './JobContainer.vue'
-import AboutMeContainer from './AboutMeContainer.vue'
+import ProjectContainer from './ProjectContainer.vue';
+import JobContainer from './JobContainer.vue';
+import AboutMeContainer from './AboutMeContainer.vue';
 
 export default {
     name: 'HomeContainer',
@@ -84,8 +84,13 @@ export default {
         return {
             mariovideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/EMslyjWIPGo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
             mytunesvideo: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1c4erMvMnVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
-            scrolled: false
-        }
+            scrolled: false,
+            links: [
+                {'name': 'About Me', 'link': 'aboutme'},
+                {'name': 'Job History', 'link': 'jobhistory'},
+                {'name': 'Projects', 'link': 'projects'}
+            ]
+        };
     },
     components: {
         'project-container': ProjectContainer,
@@ -94,44 +99,39 @@ export default {
     },
     methods: {
         handleScroll () {
-            this.scrolled = window.scrollY > 0
-            let mainHeadings = this.$el.querySelectorAll('.main-section')
-            let sideBarButtons = document.querySelectorAll('.link-buttons')
-            let topPos = this.$el.scrollTop
-            let mainHeight = this.$el.getBoundingClientRect().height
-            let goalHeight = topPos + 1 / 4 * mainHeight
-            let closestElement = null
-            let closestDistance = Number.MAX_SAFE_INTEGER
+            this.scrolled = window.scrollY > 0;
+            let mainHeadings = this.$el.querySelectorAll('.main-section');
+            let sideBarButtons = document.querySelectorAll('.link-buttons');
+            let topPos = this.$el.scrollTop;
+            let mainHeight = this.$el.getBoundingClientRect().height;
+            let goalHeight = topPos + 1 / 4 * mainHeight;
+            let closestElement = null;
+            let closestDistance = Number.MAX_SAFE_INTEGER;
 
             for (let element of mainHeadings) {
-                let headingTop = element.offsetTop
-                let distanceToHeading = goalHeight - headingTop
-                element.classList.remove('active')
+                let headingTop = element.offsetTop;
+                let distanceToHeading = goalHeight - headingTop;
+                element.classList.remove('active');
 
                 if (distanceToHeading >= 0 && closestDistance > distanceToHeading) {
-                    closestDistance = distanceToHeading
-                    closestElement = element
+                    closestDistance = distanceToHeading;
+                    closestElement = element;
                 }
             }
 
             // Make sure none of the buttons are active before we mark the new active button.
             for (let element of sideBarButtons) {
-                element.classList.remove('active')
+                element.classList.remove('active');
             }
 
             if (closestElement) {
-                let id = 'link_' + closestElement.id
-                let element = document.getElementById(id)
-                element.classList.add('active')
+                let id = 'link_' + closestElement.id;
+                let element = document.getElementById(id);
+                element.classList.add('active');
             }
         }
-    },
-    created: function () {
-    },
-    destroyed: function () {
-
     }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

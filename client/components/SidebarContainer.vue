@@ -11,8 +11,7 @@
 
       <div class="link-holder">
           <button :id="'link_' + link.link"  v-for="link in links" :key="link.name"
-            class="link-buttons"
-            v-on:click="linkClick(link.link)">
+                  class="link-buttons" v-on:click="linkClick(link.link)">
               <span>{{link.name}}</span>
           </button>
       </div>
@@ -32,31 +31,37 @@
 </template>
 
 <script>
+
+import router from '../router';
+
 export default {
     name: 'SidebarContainer',
     data () {
         return {
-        }
+        };
     },
-    props: [
-        'links'
-    ],
+    props: [],
     methods: {
         linkClick (link) {
-            let element = document.getElementById(link)
-            console.log('element', element)
-
+            let element = document.getElementById(link);
             let scrollOptions = {
                 'behavior': 'smooth',
                 'block': 'start',
                 'inline': 'nearest'
-            }
-            element.scrollIntoView(scrollOptions)
+            };
+            element.scrollIntoView(scrollOptions);
         }
     },
-    created: function () {
+    watch: {
+        $route (to, from) {
+            console.log('to', to);
+            console.log('from', from);
+        }
+    },
+    created () {
+        this.links = router.options;
     }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

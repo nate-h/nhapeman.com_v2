@@ -41,16 +41,9 @@ export default {
     name: 'AboutMeContainer',
     data () {
         return {
-        }
-    },
-    props: [
-
-    ],
-    methods: {
-    },
-    created: function () {
+        };
     }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
