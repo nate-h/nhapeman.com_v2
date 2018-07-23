@@ -10,7 +10,8 @@
       </div>
 
       <div class="link-holder">
-          <button :id="'link_' + link.link"  v-for="link in links" :key="link.name"
+          <button :id="'link_' + link.link"
+                  v-for="link in $store.state.links" :key="link.name"
                   class="link-buttons" v-on:click="linkClick(link.link)">
               <span>{{link.name}}</span>
           </button>
@@ -32,7 +33,7 @@
 
 <script>
 
-import router from '../router';
+// import router from '../router';
 
 export default {
     name: 'SidebarContainer',
@@ -60,9 +61,8 @@ export default {
     },
     created () {
         // Routes - in case need in the future.
-        this.links = router.options.routes;
-        console.log('this.links', this.links);
-        console.log('router', router.currentRoute);
+        // this.links = router.options.routes;
+        // console.log('this.links', this.links);
     }
 };
 </script>

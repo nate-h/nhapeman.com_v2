@@ -13,8 +13,14 @@ export default {
     name: 'Resume',
     data () {
         return {
-            msg: 'Welcome to Your Vue.js App'
+            msg: 'Welcome to Your Vue.js App',
+            links: [
+                {'name': 'Home', 'link': '/home'}
+            ]
         };
+    },
+    created () {
+        this.$store.commit('setLinks', this.links);
     }
 };
 </script>

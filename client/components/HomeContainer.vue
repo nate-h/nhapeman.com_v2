@@ -138,7 +138,7 @@ export default {
         }
     },
     created () {
-        console.log('this.$store', this.$store.state);
+        this.$store.commit('setLinks', this.links);
     }
 };
 </script>

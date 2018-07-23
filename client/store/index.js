@@ -5,10 +5,12 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        routes: {}
+        routes: {},
+        links: {}
     },
     mutations: {
-        setroutes (state) {
+        setLinks (state, links) {
+            state.links = links;
         }
     }
 });
