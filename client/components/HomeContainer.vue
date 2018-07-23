@@ -40,15 +40,21 @@
             <h1 id="projects" class="main-section">Projects</h1>
             <project-container :class="{'big-project': true}"
               name='SDL Super Mario Bros Clone'
-              :video="mariovideo"
+              :img="require('img/frackoptima.png')"
               link='http://frackoptima.com/'>
+
+              <!-- :video="mariovideo" -->
+
                 This game was developed solely by me using c++/c and SDL as the API. I do not have any plans to publish the game and constructed it for the fun of programming and the awesome learning experience. Some things to note are its heavy use in Polymorphism, Containers, Memory Management, and Threading. The video covers most of the key concepts involved so check it out.
             </project-container>
 
             <project-container :class="{'big-project': true}"
               name='MyTunes: A Java media player'
-              :video="mytunesvideo"
+              :img="require('img/frackoptima.png')"
               link='http://frackoptima.com/'>
+
+              <!-- :video="mytunesvideo" -->
+
                 I created this media player for the sole purpose of having greater management over my music. The layout and functionality is similar to iTunes but it has some additional features like hotkeys for inserting songs into playlists or checkmarks to see which playlist a song is in. Speed was a big concern while implementing this media player. When a user adds music to the library, all the information for each song is calculated only once (not each time myTunes start) then stored in a hashmap that way I can access information in constant time. Also, I do not copy the songs to a folder, rather I copy the address then load it when the user wants to play. Lastly, when I save the information, I serialize it that way it loads fast. Two of the most difficult things to implement were the regex filter for the search bar and the multi-threading for playing the sound.
             </project-container>
 
@@ -130,6 +136,9 @@ export default {
                 element.classList.add('active');
             }
         }
+    },
+    created () {
+        // this.$emit('route-created')
     }
 };
 </script>

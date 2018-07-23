@@ -59,7 +59,10 @@ export default {
         }
     },
     created () {
-        this.links = router.options;
+        // Routes - in case need in the future.
+        this.links = router.options.routes;
+        console.log('this.links', this.links);
+        console.log('router', router.currentRoute);
     }
 };
 </script>
