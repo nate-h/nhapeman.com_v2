@@ -138,7 +138,7 @@ export default {
         }
     },
     created () {
-        // this.$emit('route-created')
+        console.log('this.$store', this.$store.state);
     }
 };
 </script>

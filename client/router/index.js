@@ -7,8 +7,7 @@ import Resume from '@/components/Resume';
 
 Vue.use(Router);
 
-let router;
-export default router = new Router({
+const router = new Router({
     routes: [
         {
             path: '/resume',
@@ -20,16 +19,10 @@ export default router = new Router({
             name: 'Home',
             component: Home
         }
-    ]
+    ],
+    beforeEach: (to, from, next) => {
+        next();
+    }
 });
 
-// router.beforeRouteUpdate((to, from, next) => {
-//     // console.log('test');
-//     console.log('from', from);
-//     console.log('to', to);
-//     next();
-// });
-
-router.beforeEach((to, from, next) => {
-    next();
-});
+export default router;
