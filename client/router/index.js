@@ -5,6 +5,10 @@ import Router from 'vue-router';
 import Home from '@/components/HomeContainer';
 import Resume from '@/components/Resume';
 
+// Projects
+import Projects from '@/components/Projects';
+import Mario from '@/components/ProjectMario';
+
 Vue.use(Router);
 
 const router = new Router({
@@ -18,6 +22,18 @@ const router = new Router({
             path: '/',
             name: 'Home',
             component: Home
+        },
+        {
+            path: '/projects',
+            name: 'Projects',
+            component: Projects,
+            children: [
+                {
+                    path: '/projects/mario',
+                    name: 'Mario',
+                    component: Mario
+                }
+            ]
         }
     ],
     beforeEach: (to, from, next) => {
