@@ -26,25 +26,7 @@ export default {
 
     },
     created: function () {
-        /*
-        var parallaxHeight = function parallaxHeightFull() {
-            var scrollTop = $(this).scrollTop();
-            var sampleSectionTop = $('.sample-section').offset().top;
-            var headerHeight = $('.sample-header-text').outerHeight();
-            $('.sample-section').css({'margin-top': headerHeight})
-            $('.sample-header').css({height: headerHeight - scrollTop})
-        }
 
-        parallaxHeight();
-
-        $(window).scroll(function() {
-            parallaxHeight();
-        })
-
-        $(window).resize(function() {
-            parallaxHeight();
-        })
-        */
     },
     destroyed: function () {
 

@@ -1,5 +1,6 @@
 <template>
   <div class="projects">
+      <router-view></router-view>
     projects
   </div>
 </template>

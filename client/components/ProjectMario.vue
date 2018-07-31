@@ -27,9 +27,8 @@ export default {
 
     .project-mario {
 
-        background-color: #525659;
         height: 100%;
-        width: calc(100% - 220px);
+        width: 100%;
 
         .pdf {
             width: 100%;

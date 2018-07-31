@@ -7,7 +7,7 @@ import Resume from '@/components/Resume';
 
 // Projects
 import Projects from '@/components/Projects';
-import Mario from '@/components/ProjectMario';
+import ProjectMario from '@/components/ProjectMario';
 
 Vue.use(Router);
 
@@ -29,9 +29,9 @@ const router = new Router({
             component: Projects,
             children: [
                 {
-                    path: '/projects/mario',
-                    name: 'Mario',
-                    component: Mario
+                    path: 'mario',
+                    name: 'ProjectMario',
+                    component: ProjectMario
                 }
             ]
         }
