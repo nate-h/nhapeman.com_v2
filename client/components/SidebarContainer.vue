@@ -10,11 +10,11 @@
       </div>
 
       <div class="link-holder">
-          <button :id="'link_' + link.link"
-                  v-for="link in $store.state.links" :key="link.name"
-                  class="link-buttons" v-on:click="linkClick(link.link)">
-              <span>{{link.name}}</span>
-          </button>
+          <router-link v-for="link in routes" :key="link.name" :to="link.path">
+              <button class="link-buttons" v-bind:class="{active: isActive(link)}">
+                  <span>{{link.name}}</span>
+              </button>
+          </router-link>
       </div>
 
       <div class="social-links">
@@ -33,36 +33,27 @@
 
 <script>
 
-// import router from '../router';
-
 export default {
     name: 'SidebarContainer',
     data () {
         return {
+            routes: {}
         };
     },
     props: [],
     methods: {
         linkClick (link) {
-            let element = document.getElementById(link);
-            let scrollOptions = {
-                'behavior': 'smooth',
-                'block': 'start',
-                'inline': 'nearest'
-            };
-            element.scrollIntoView(scrollOptions);
+            console.log('link', link);
+        },
+        isActive (link) {
+            return link.name === this.$route.name;
         }
     },
     watch: {
-        $route (to, from) {
-            console.log('to', to);
-            console.log('from', from);
-        }
+
     },
     created () {
-        // Routes - in case need in the future.
-        // this.links = router.options.routes;
-        // console.log('this.links', this.links);
+        this.routes = this.$router.options.routes;
     }
 };
 </script>
