@@ -1,26 +1,36 @@
 <template>
   <header class="sidebar-container">
 
-      <img src="~img/logo.png" class="headerlogo">
-      <div class="vertical-rows">
-          <a href="#">
-              <h1>Nathanial Hapeman</h1>
-          </a>
-          <h2>Software Engineer</h2>
+      <div class="logo-blob">
+          <img src="~img/logo.png" class="logo">
+          <div class="vertical-rows">
+              <a href="#">
+                  <h1>Nathanial Hapeman</h1>
+              </a>
+              <h2>Software Engineer</h2>
+          </div>
       </div>
 
       <div class="link-holder">
-          <router-link v-for="link in routes" :key="link.name" :to="link.path">
-              <button class="link-buttons" v-bind:class="{active: isActive(link)}">
-                  <span>{{link.name}}</span>
-              </button>
-          </router-link>
+          <div v-for="link in routes" :key="link.name">
+              <router-link :to="link.path">
+                  <button class="link-buttons" v-bind:class="{active: isActive(link)}">
+                      <span>{{link.name}}</span>
+                  </button>
+              </router-link>
+
+              <!-- Iterate on child paths -->
+              <div v-for="childLink in link.children" :key="childLink.name">
+                  <router-link :to="link.path + '/' + childLink.path">
+                      <button class="link-buttons" v-bind:class="{active: isActive(childLink)}">
+                          <span>{{childLink.name}}</span>
+                      </button>
+                  </router-link>
+              </div>
+          </div>
       </div>
 
       <div class="social-links">
-          <svg-link src="~img/resume.svg" link="#/resume">
-              Resume
-          </svg-link>
           <svg-link src="~img/linkedin.svg" link="https://www.linkedin.com/in/nhapeman/">
               LinkedIn
           </svg-link>
@@ -54,6 +64,7 @@ export default {
     },
     created () {
         this.routes = this.$router.options.routes;
+        console.log('this.routes', this.routes);
     }
 };
 </script>
@@ -65,17 +76,14 @@ export default {
 
     header {
 
-        @extend %h-center;
-
+        align-items: left;
         background-color: $dark0;
+        display: inline-flex;
+        flex-direction: column;
         padding: $padding-large;
         text-align: left;
+        vertical-align: middle;
         width: 220px;
-
-        .headerlogo:hover {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
 
         a {
             @extend %v-center;
@@ -99,11 +107,20 @@ export default {
             padding: 0;
         }
 
-        .link-holder {
+        .logo-blob {
 
             @extend %h-center;
 
-            margin-top: $margin-large;
+            .logo:hover {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .link-holder {
+
+            @extend %h-center;
+            margin-top: $margin-xxx-large;
 
             .link-buttons {
 

@@ -14,14 +14,14 @@ Vue.use(Router);
 const router = new Router({
     routes: [
         {
-            path: '/resume',
-            name: 'Resume',
-            component: Resume
-        },
-        {
             path: '/',
             name: 'Home',
             component: Home
+        },
+        {
+            path: '/resume',
+            name: 'Resume',
+            component: Resume
         },
         {
             path: '/projects',
@@ -30,7 +30,7 @@ const router = new Router({
             children: [
                 {
                     path: 'mario',
-                    name: 'ProjectMario',
+                    name: 'Mario',
                     component: ProjectMario
                 }
             ]
