@@ -11,14 +11,4 @@
   * About me
     - Needs more content
     - Needs back story
-    - Needs map of the city where I live
-
-
-# DO NOW:
-  * goal: side bar with childs for important links in the route
-
-
-
-
-
-create skill component
+    - Clickable pics need a hover state.

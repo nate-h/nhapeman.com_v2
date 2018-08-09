@@ -33,10 +33,6 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-body > * {
-    flex-shrink: 0;
-}
-
 img,
 svg {
     max-width: 100%;
@@ -137,6 +133,70 @@ p, ul, ol, li, td, input, button, label {
     flex-direction: column;
     vertical-align: middle;
 }
+
+////////////////////////////////////////////////////////////////////////
+// direction-layouts
+////////////////////////////////////////////////////////////////////////
+
+%direction-layouts {
+
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+
+    .grow {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    &.equal > * {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    &.la {
+        text-align: left;
+    }
+
+    &.ra {
+        text-align: right;
+    }
+}
+
+.l-to-r {
+    @extend %direction-layouts;
+    flex-direction: row;
+}
+
+.r-to-l {
+    @extend %direction-layouts;
+    flex-direction: row-reverse;
+}
+
+.t-to-b {
+    @extend %direction-layouts;
+    flex-direction: column;
+}
+
+.b-to-t {
+    @extend %direction-layouts;
+    flex-direction: column-reverse;
+}
+
+.center {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.spread {
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
 
 /////////////////////////////////////////////////////////////////////
 // Text

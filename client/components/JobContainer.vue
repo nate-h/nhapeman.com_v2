@@ -1,5 +1,5 @@
 <template>
-  <div class="job-container">
+  <div class="job-container l-to-r la">
       <!-- Content inserted here! -->
       <div class="leftside">
         <img :src="img">
@@ -42,7 +42,6 @@ export default {
     .job-container {
 
         @extend %container;
-        display: inline-flex;
 
         .leftside {
             flex-grow: 0;

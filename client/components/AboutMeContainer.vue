@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me-container">
+  <div class="about-me-container l-to-r equal la">
       <!-- Content inserted here! -->
       <div class="row">
           <h2> About Me </h2>
@@ -55,12 +55,7 @@ export default {
 
         @extend %container;
 
-        display: inline-flex;
-        flex-direction: row;
-
         .row {
-            flex-basis: 0;
-            flex-grow: 1;
 
             &:not(:first-child) { margin-left: $margin; }
             &:not(:last-child) { margin-right: $margin; }

@@ -1,19 +1,15 @@
 <template>
-  <div class="root-div">
-    <embed class="pdf"
-        :src="require('root/resume/Nathanial.Hapeman.Resume.pdf')"
-        type='application/pdf'
-    >
+  <div class="project-pacman">
+    Pacman
   </div>
 </template>
 
 <script>
 
 export default {
-    name: 'Resume',
+    name: 'ProjectPacman',
     data () {
         return {
-            msg: 'Welcome to Your Vue.js App',
             links: [
                 {'name': 'Home', 'link': '/home'}
             ]
@@ -29,11 +25,10 @@ export default {
 <style scoped lang="scss">
     @import "~scss/main.scss";
 
-    .root-div {
+    .project-pacman {
 
-        background-color: #525659;
         height: 100%;
-        width: calc(100% - 220px);
+        width: 100%;
 
         .pdf {
             width: 100%;

@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="l-to-r">
 
         <!-- Inject sidebar -->
         <sidebar-container></sidebar-container>
@@ -21,17 +21,7 @@ export default {
     },
     components: {
         'sidebar-container': SidebarContainer
-    },
-    methods: {
-
-    },
-    created: function () {
-
-    },
-    destroyed: function () {
-
     }
-
 };
 </script>
 
@@ -40,22 +30,9 @@ export default {
 @import "~scss/main.scss";
 
 #app {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-
-    & > * {
-        flex-shrink: 0;
-    }
-
-    .sidebar-container {}
-    .home-container {
-        flex: 1;
+    .root-div {
         overflow: auto;
     }
-    .footer-container {}
 }
 
 </style>

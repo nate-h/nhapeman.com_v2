@@ -8,6 +8,7 @@ import Resume from '@/components/Resume';
 // Projects
 import Projects from '@/components/Projects';
 import ProjectMario from '@/components/ProjectMario';
+import ProjectPacman from '@/components/ProjectPacman';
 
 Vue.use(Router);
 
@@ -30,8 +31,13 @@ const router = new Router({
             children: [
                 {
                     path: 'mario',
-                    name: 'Mario',
+                    name: 'Mario Clone',
                     component: ProjectMario
+                },
+                {
+                    path: 'pacman',
+                    name: 'Pacman Clone',
+                    component: ProjectPacman
                 }
             ]
         }

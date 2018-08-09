@@ -45,6 +45,7 @@ export default {
 
         display: inline-flex;
         flex-direction: row;
+        text-align: left;
 
         // If big project, make container full width.
         &.big-project {

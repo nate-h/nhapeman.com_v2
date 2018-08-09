@@ -1,5 +1,5 @@
 <template>
-  <header class="sidebar-container">
+  <header class="sidebar-container t-to-b">
 
       <div class="logo-blob">
           <img src="~img/logo.png" class="logo">
@@ -74,15 +74,11 @@ export default {
 
     @import "~scss/main.scss";
 
-    header {
+    .sidebar-container {
 
-        align-items: left;
         background-color: $dark0;
-        display: inline-flex;
-        flex-direction: column;
+        flex-shrink: 0;
         padding: $padding-large;
-        text-align: left;
-        vertical-align: middle;
         width: 220px;
 
         a {
@@ -119,7 +115,7 @@ export default {
 
         .link-holder {
 
-            @extend %h-center;
+            //@extend %h-center;
             margin-top: $margin-xxx-large;
 
             .link-buttons {
