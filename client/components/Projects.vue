@@ -2,7 +2,7 @@
     <div class="root-div t-to-b">
         <router-view></router-view>
 
-        <h1 id="projects">Projects</h1>
+        <h1 id="projects">Projects at a glance</h1>
 
         <div class="t-to-b">
             <project-container :class="{'big-project': true}"

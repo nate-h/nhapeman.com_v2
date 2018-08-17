@@ -30,6 +30,10 @@ export default {
 @import "~scss/main.scss";
 
 #app {
+
+    height: 100%;
+    overflow: auto;
+
     .root-div {
         overflow: auto;
     }
